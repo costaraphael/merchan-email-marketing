@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :destinatarios
 
-  resources :usuarios
+  resources :usuarios, except: [:show]
 
   resources :grupo_usuarios
 

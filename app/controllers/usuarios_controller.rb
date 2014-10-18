@@ -1,5 +1,5 @@
 class UsuariosController < ApplicationController
-  before_action :set_usuario, only: [:show, :edit, :update, :destroy]
+  before_action :set_usuario, only: [:edit, :update, :destroy]
   respond_to :html
   load_and_authorize_resource
 
@@ -8,9 +8,6 @@ class UsuariosController < ApplicationController
     respond_with(@usuarios)
   end
 
-  def show
-    respond_with(@usuario)
-  end
 
   def new
     @usuario = Usuario.new
@@ -28,6 +25,8 @@ class UsuariosController < ApplicationController
     @usuario.senha = Digest::SHA1.hexdigest("#{@usuario.salt}--#{@usuario.senha}")
 
     @usuario.senha_confirmation = @usuario.senha if senha_confirmada
+
+    @usuario.ativo = true
     if @usuario.save
       redirect_to usuarios_path
     else
@@ -58,6 +57,6 @@ class UsuariosController < ApplicationController
   end
 
   def usuario_params
-    params.require(:usuario).permit(:nome, :login, :senha, :senha_confirmation, :salt, :grupo_usuario_id)
+    params.require(:usuario).permit(:nome, :login, :senha, :senha_confirmation, :grupo_usuario_id, :role_id, :email)
   end
 end
