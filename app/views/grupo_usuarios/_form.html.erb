@@ -1,21 +1,26 @@
-<%= form_for(@grupo_usuario) do |f| %>
-  <% if @grupo_usuario.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@grupo_usuario.errors.count, "error") %> prohibited this grupo_usuario from being saved:</h2>
+<%= simple_form_for (@grupo_usuario), :html => {class: 'form-horizontal'} do |f| %>
+    <% if @grupo_usuario.errors.any? %>
+        <div class="alert alert-danger">
+          <h4>
+            <%= pluralize(@grupo_usuario.errors.count, 'erro impediu', 'erros impediram') %> que esse grupo fosse salvo.
+          </h4>
 
-      <ul>
-      <% @grupo_usuario.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+          <ul>
+            <% @grupo_usuario.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+    <div class="row">
+
+      <div class="col-md-6">
+        <%= f.label :nome %>
+        <br>
+        <%= f.text_field :nome, class: 'form-control input-sm' %>
+      </div>
+      <div class="col-md-12" style="margin-top: 20px">
+        <%= f.button :submit, 'Salvar', class: 'btn btn-primary btn-lg btn-block' %>
+      </div>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :nome %><br>
-    <%= f.text_field :nome %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
 <% end %>

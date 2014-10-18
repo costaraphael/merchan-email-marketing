@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   resources :usuarios, except: [:show]
 
-  resources :grupo_usuarios
+  resources :grupo_usuarios, except: [:show]
 
   root 'index#index'
 
@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   post 'login' => 'index#logar'
 
-  get 'logout', controller: 'index', action:'logout', as: 'logout'
+  get 'logout', controller: 'index', action: 'logout', as: 'logout'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

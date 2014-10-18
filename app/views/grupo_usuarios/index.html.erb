@@ -1,25 +1,30 @@
-<h1>Listing grupo_usuarios</h1>
+<h1>
+  Grupo de usuários
+  <%= link_to 'Novo', new_grupo_usuario_path, class: ' btn btn-primary btn-lg pull-right' %>
+</h1>
+<div class="separator"></div>
 
-<table>
+<table class="table data-table table-hover table-striped">
   <thead>
-    <tr>
-      <th>Nome</th>
-      <th colspan="3"></th>
-    </tr>
+  <tr>
+    <th>Nome</th>
+    <th class="text-center" width="1">
+      <i class="fa fa-cogs"></i>
+    </th>
+  </tr>
   </thead>
 
   <tbody>
-    <% @grupo_usuarios.each do |grupo_usuario| %>
+  <% @grupo_usuarios.each do |grupo_usuario| %>
       <tr>
         <td><%= grupo_usuario.nome %></td>
-        <td><%= link_to 'Show', grupo_usuario %></td>
-        <td><%= link_to 'Edit', edit_grupo_usuario_path(grupo_usuario) %></td>
-        <td><%= link_to 'Destroy', grupo_usuario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td width="1">
+          <%= link_to 'Editar', edit_grupo_usuario_path(grupo_usuario), class: 'btn btn-primary btn-xs' %>
+        </td>
       </tr>
-    <% end %>
+  <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Grupo usuario', new_grupo_usuario_path %>

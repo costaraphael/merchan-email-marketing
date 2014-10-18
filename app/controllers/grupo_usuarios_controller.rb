@@ -8,9 +8,6 @@ class GrupoUsuariosController < ApplicationController
     respond_with(@grupo_usuarios)
   end
 
-  def show
-    respond_with(@grupo_usuario)
-  end
 
   def new
     @grupo_usuario = GrupoUsuario.new
@@ -22,26 +19,30 @@ class GrupoUsuariosController < ApplicationController
 
   def create
     @grupo_usuario = GrupoUsuario.new(grupo_usuario_params)
-    @grupo_usuario.save
-    respond_with(@grupo_usuario)
+    if @grupo_usuario.save
+      redirect_to grupo_usuarios_path
+    else
+      render :new
+    end
   end
 
   def update
     @grupo_usuario.update(grupo_usuario_params)
-    respond_with(@grupo_usuario)
+
+    if @grupo_usuario.save
+      redirect_to grupo_usuarios_path
+    else
+      render :new
+    end
   end
 
-  def destroy
-    @grupo_usuario.destroy
-    respond_with(@grupo_usuario)
-  end
 
   private
-    def set_grupo_usuario
-      @grupo_usuario = GrupoUsuario.find(params[:id])
-    end
+  def set_grupo_usuario
+    @grupo_usuario = GrupoUsuario.find(params[:id])
+  end
 
-    def grupo_usuario_params
-      params.require(:grupo_usuario).permit(:nome)
-    end
+  def grupo_usuario_params
+    params.require(:grupo_usuario).permit(:nome)
+  end
 end
