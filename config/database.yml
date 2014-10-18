@@ -16,7 +16,6 @@ default: &default
   host: localhost
   username: root
   password: <%= ENV['MERCHAN_PASSWORD'] %>
-  socket: /var/run/mysqld/mysqld.sock
 
 development:
   <<: *default
