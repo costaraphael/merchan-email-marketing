@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141018141751) do
+ActiveRecord::Schema.define(version: 20141018223904) do
 
   create_table "destinatarios", force: true do |t|
     t.string   "nome"
@@ -67,6 +67,7 @@ ActiveRecord::Schema.define(version: 20141018141751) do
     t.datetime "updated_at"
     t.integer  "role_id"
     t.boolean  "ativo"
+    t.string   "email"
   end
 
   add_index "usuarios", ["grupo_usuario_id"], name: "index_usuarios_on_grupo_usuario_id", using: :btree

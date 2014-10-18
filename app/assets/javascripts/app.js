@@ -2,7 +2,7 @@
  * Created by raphael on 31/05/14.
  */
 $(document).on('ready page:load',function () {
-    $('table.table').not('.fc-header').dataTable({
+    $('table.data-table').not('.fc-header').dataTable({
         "aoColumnDefs": [ {
             "aTargets": [-1],
             "bSortable": false,
