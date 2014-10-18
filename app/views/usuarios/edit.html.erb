@@ -1,6 +1,9 @@
-<h1>Editing usuario</h1>
+<h1 class="page-title">Edição de usuario
+  <div class="pull-right">
+    <%= link_to 'voltar', usuarios_path, class: 'btn btn-default btn-lg' %>
+  </div>
+</h1>
+<div class="separator"></div>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @usuario %> |
-<%= link_to 'Back', usuarios_path %>
