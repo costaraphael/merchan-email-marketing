@@ -1,0 +1,15 @@
+<%= simple_form_for @destinatario, html: {class: 'form-horizontal'} do |f| %>
+    <%= f.error_notification %>
+    <div class="row">
+      <div class="col-md-6">
+        <%= f.input :nome, input_html: {class: 'input-sm form-control'} %>
+        <%= f.input :email, input_html: {class: 'input-sm form-control'} %>
+        <%= f.input :status %>
+        <%= f.collection_radio_buttons :sexo, [%w(m Masculino), %w(f Feminino)], :first, :last %>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
+<% end %>

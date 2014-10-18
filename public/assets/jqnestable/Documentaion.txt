@@ -1,0 +1,37 @@
+Example: http://www.a1alfred.com/legend/admin/dragwidgets.html
+
+Include in body: <script src="assets/jqnestable/js/jquery.nestable.js"></script>
+
+Simple Usage:
+
+ <div class="dd">
+    <ol class="dd-list">
+        <li class="dd-item" data-id="1">
+            <div class="dd-handle">Item 1</div>
+            <ol class="dd-list">
+                <li class="dd-item" data-id="2">
+                    <div class="dd-handle">Item 2</div>
+                </li>
+                <li class="dd-item" data-id="3">
+                    <div class="dd-handle">Item 5</div>
+                </li>
+            </ol>
+        </li>
+        <li class="dd-item" data-id="4">
+            <div class="dd-handle">Item 2</div>
+        </li>
+    </ol>
+</div>
+
+To run:
+
+$('.dd').nestable();
+
+
+----
+
+More Details: https://github.com/dbushell/Nestable
+
+Dual-licensed MIT or BSD (http://www.freebsd.org/copyright/freebsd-license.html)
+
+Made by David Bushell

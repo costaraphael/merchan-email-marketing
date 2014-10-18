@@ -1,0 +1,23 @@
+Example: http://www.a1alfred.com/legend/admin/tinymce.html
+
+Include in body: <script src="assets/tinymce/tinymce.min.js"></script>
+
+Basic Usage:
+
+<textarea id="mce" rows="10"></textarea>
+
+To run:
+
+tinyMCE.init({
+    mode : "textareas",
+    selector: "#mce"
+});
+
+
+----
+
+More Details: https://github.com/tinymce/tinymce
+
+Liscense LGPL (http://www.gnu.org/licenses/lgpl.html)
+
+Made by Johan Sörlin

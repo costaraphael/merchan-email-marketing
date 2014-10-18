@@ -1,0 +1,21 @@
+Example: http://www.a1alfred.com/legend/admin/pinesalerts.html
+
+Include in head: <link href="assets/pnotify/css/jquery.pnotify.default.css" rel="stylesheet">
+
+Include in body: <script src="assets/pnotify/js/jquery.pnotify.min.js"></script>
+
+Basic Usage:
+
+<button class="btn btn-default btn-block btn-gap" onclick="$.pnotify({ title: 'Regular Notice', text: 'Check me out! I\'m a notice.' });">Regular Notice</button>
+
+
+----
+
+More Details: http://pinesframework.org/pnotify/
+
+Triple license under the GPL, LGPL, and MPL:
+http://www.gnu.org/licenses/gpl.html
+http://www.gnu.org/licenses/lgpl.html
+http://www.mozilla.org/MPL/MPL-1.1.html
+
+Made by Hunter Perrin

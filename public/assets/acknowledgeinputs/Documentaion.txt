@@ -1,0 +1,33 @@
+Modified files to add font awesome 3 support
+
+----
+
+Example: http://www.a1alfred.com/legend/admin/validation.html
+
+Include in body: <script src="assets/acknowledgeinputs/js/bootstrap-acknowledgeinput.min.js"></script>
+
+Usage:
+
+<div class="form-group">
+	<p class="text-muted">
+			<small>Any Input validation</small>
+		</p>
+    <div class="input-group" data-role="acknowledge-input">
+	  <input type="text" required="required" placeholder="Any Text Required" class="form-control" data-type="text" >
+	  <span class="input-group-addon" data-role="acknowledgement"><i></i></span>
+	</div>
+</div>
+
+To run it:
+
+$().acknowledgeinput();
+
+You can change the icons in the files 
+
+----
+
+More Details: https://github.com/AverageMarcus/Bootstrap-AcknowledgeInputs
+
+Liscense Apache 2 
+
+Made by Marcus Nobel

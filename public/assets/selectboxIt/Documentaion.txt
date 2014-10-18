@@ -1,0 +1,26 @@
+Example: http://www.a1alfred.com/legend/admin/selectboxit.html
+
+Include in head: <link href="assets/selectboxIt/css/jquery.selectBoxIt.css" rel="stylesheet">
+
+Include in body: <script src="assets/selectboxIt/js/jquery.selectBoxIt.min.js"></script>
+
+Basic Usage:
+
+<select class="selectpicker" id="select">
+	<option>This is a good theme</option>
+	<option>Don't mean to</option>
+	<option>toot my own horn here</option>
+</select>
+
+To run:
+
+$("#select").selectBoxIt();
+
+
+----
+
+More Details: https://github.com/gfranko/jquery.selectBoxIt.js
+
+Liscense MIT
+
+Made by Greg Franko

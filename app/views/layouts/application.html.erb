@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SYSCEE</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<nav class="sidenav left" role="navigation">
+  <ul class="menu">
+    <li class="user">
+      <div class="content">
+        <h1>
+          Merchan
+          <br>
+          <small>Email marketing</small>
+        </h1>
+      </div>
+    </li>
+    <!-- NAVEGAÇÃO -->
+    <%== create_link root_path, 'Inicio', 'home' %>
+    <%== create_link destinatarios_path, 'Destinatários', 'openbook' if can? :read, Destinatario %>
+    <%== create_link listas_path, 'Listas de Envio', 'bubbles' if can? :read, Lista %>
+    <%== create_link grupo_usuarios_path, 'Grupos de Usuários', 'users' if can? :read, GrupoUsuario %>
+    <%== create_link usuarios_path, 'Usuários', 'man' if can? :read, Usuario %>
+    <!-- NAVEGAÇÃO -->
+    <li class="logout">
+      <%= link_to logout_path do %>
+          Sair
+          <div>
+            <%= image_tag 'icons/logout.png' %>
+          </div>
+      <% end %>
+    </li>
+  </ul>
+</nav>
+<div class="overlay"></div>
+<section class="wrap">
+  <div class="container" style="max-width: 1120px">
+    <div class="well main" style="display:none;">
+      <%= yield %>
+    </div>
+  </div>
+</section>
+</body>
+</html>

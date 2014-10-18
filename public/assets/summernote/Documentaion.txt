@@ -1,0 +1,24 @@
+Orginal files have been modified for font awesome 4
+
+Example: http://www.a1alfred.com/legend/admin/summernote.html
+
+Include in head: <link href="assets/summernote/css/summernote.css" rel="stylesheet">
+
+Include in body: <script src="assets/summernote/js/summernote.min.js"></script>
+
+Basic Usage:
+
+<div id="summernote"></div>
+
+To run:
+
+$('#summernote').summernote();
+
+
+----
+
+More Details: https://github.com/HackerWins/summernote/
+
+Liscense MIT
+
+Made by Alan Hong

@@ -1,0 +1,51 @@
+Example: http://www.a1alfred.com/legend/admin/photogrid.html
+
+Include in head: <link href="assets/photosetgrid/css/colorbox.css" rel="stylesheet">
+
+Include in body: <script src="assets/photosetgrid/js/jquery.colorbox.js"></script>
+        		 <script src="assets/photosetgrid/js/jquery.photoset-grid.min.js"></script>
+
+Basic Usage:
+
+<div class="photoset-grid-lightbox" data-layout="32323" style="visibility: hidden;">
+    <img rel="gallery" src="assets/img/gallery/1.jpg" data-highres="assets/img/gallery/1.jpg" alt="" />
+    <img rel="gallery" src="assets/img/gallery/2.jpg" data-highres="assets/img/gallery/2.jpg" alt="" />
+    <img rel="gallery" src="assets/img/gallery/3.jpg" data-highres="assets/img/gallery/3.jpg" alt="" />
+    <img rel="gallery" src="assets/img/gallery/4.jpg" data-highres="assets/img/gallery/4.jpg" alt="" />
+    <img rel="gallery" src="assets/img/gallery/5.jpg" data-highres="assets/img/gallery/5.jpg" alt="" />
+    <img rel="gallery" src="assets/img/gallery/6.jpg" data-highres="assets/img/gallery/6.jpg" alt="" />
+    <img rel="gallery" src="assets/img/gallery/7.jpg" data-highres="assets/img/gallery/7.jpg" alt="" />
+    <img rel="gallery" src="assets/img/gallery/8.jpg" data-highres="assets/img/gallery/8.jpg" alt="" />
+    <img rel="gallery" src="assets/img/gallery/9.jpg" data-highres="assets/img/gallery/9.jpg" alt="" />
+    <img rel="gallery" src="assets/img/gallery/10.jpg" data-highres="assets/img/gallery/10.jpg" alt="" />
+    <img rel="gallery" src="assets/img/gallery/11.jpg" data-highres="assets/img/gallery/11.jpg" alt="" />
+    <img rel="gallery" src="assets/img/gallery/12.jpg" data-highres="assets/img/gallery/12.jpg" alt="" />
+    <img rel="gallery" src="assets/img/gallery/13.jpg" data-highres="assets/img/gallery/13.jpg" alt="" />
+</div>
+
+To run:
+
+$('.photoset-grid-lightbox').photosetGrid({
+	highresLinks: true,
+    rel: 'gallery',
+    gutter: '20px',
+
+    onComplete: function () {
+        $('.photoset-grid-lightbox').attr('style', '');
+        $('.photoset-grid-lightbox a').colorbox({
+            photo: true,
+            scalePhotos: true,
+            maxHeight: '90%',
+            maxWidth: '90%'
+        });
+    }
+});
+
+
+----
+
+More Details: https://github.com/stylehatch/photoset-grid/
+
+Liscense MIT
+
+Made by Jonathan Moore

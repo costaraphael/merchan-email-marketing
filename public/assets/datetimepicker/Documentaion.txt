@@ -1,0 +1,24 @@
+Example: http://www.a1alfred.com/legend/admin/datetimepicker.html
+
+Include in head: <link href="assets/datetimepicker/css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+
+Include in body: <script src="assets/datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
+
+Simple Usage:
+
+<div class="form-group">
+	<input size="16" type="text" class="form-control" value="2012-06-15 14:45" readonly id="form_datetime">
+</div>
+
+To run:
+
+$("#form_datetime").datetimepicker({format: 'yyyy-mm-dd hh:ii'});
+
+
+----
+
+More Details: http://www.malot.fr/bootstrap-datetimepicker
+
+Liscense Apache 2
+
+Made by Stefan Petre

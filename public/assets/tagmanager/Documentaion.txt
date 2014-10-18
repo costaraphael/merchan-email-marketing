@@ -1,0 +1,26 @@
+Example: http://www.a1alfred.com/legend/admin/tagmanager.html
+
+Include in head: <link href="assets/typeahead/css/typeahead.js-bootstrap.css" rel="stylesheet">
+        		 <link href="assets/tagmanager/css/tagmanager.css" rel="stylesheet">
+
+Include in body: <script src="assets/typeahead/js/typeahead.min.js"></script>
+        		 <script src="assets/tagmanager/js/tagmanager.js"></script>
+
+Basic Usage:
+
+<input type="text" name="tags" placeholder="Tags" class="form-control" id="tag-manager" />
+
+To run:
+
+jQuery("#tag-manager").tagsManager();
+
+Typeahead is for the suggested dropdown
+
+
+----
+
+More Details: https://github.com/max-favilli/tagmanager
+
+Licensed under the Mozilla Public License (http://www.mozilla.org/MPL/2.0/)
+
+Made by Max Favilli

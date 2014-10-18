@@ -1,0 +1,28 @@
+Example: http://www.a1alfred.com/legend/admin/humanealerts.html
+
+Include in head: <link href="assets/humane/css/bigbox.css" rel="stylesheet">
+		         <link href="assets/humane/css/boldlight.css" rel="stylesheet">
+		         <link href="assets/humane/css/jackedup.css" rel="stylesheet">
+		         <link href="assets/humane/css/libnotify.css" rel="stylesheet">
+		         <link href="assets/humane/css/original.css" rel="stylesheet">
+
+Include in body: <script src="assets/humane/js/humane.min.js"></script>
+
+Simple Usage:
+
+<button type="button" onclick="boldlight()" class="btn btn-default btn-block btn-gap">Bold Light</button>
+
+To run:
+
+function boldlight(){
+ 	var notify = humane.create({ timeout: 4000, baseCls: 'humane-boldlight' })
+	notify.log('Bold Light')
+}
+
+----
+
+More Details: https://github.com/wavded/humane-js
+
+Liscense MIT
+
+Made by Marc Harter

@@ -1,0 +1,23 @@
+Example: http://www.a1alfred.com/legend/admin/jqrangeslider.html
+
+Include in head: <link href="assets/jqrangeslider/css/iThing-min.css" rel="stylesheet">
+
+Include in body: <script src="assets/jqrangeslider/js/jQAllRangeSliders-min.js"></script>
+        		 <script src="assets/jqrangeslider/js/jQAllRangeSliders-withRuler-min.js"></script>
+
+Simple Usage:
+
+<div id="slider"></div>
+
+To run:
+
+$("#slider").rangeSlider();
+
+
+----
+
+More Details: https://github.com/ghusse/jQRangeSlider
+
+Duel liscense under MIT or GPLv3 (http://www.gnu.org/copyleft/gpl.html)
+
+Made by Guillaume Gautreau

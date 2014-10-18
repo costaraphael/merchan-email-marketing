@@ -1,0 +1,68 @@
+Example: http://www.a1alfred.com/legend/admin/datatables.html
+
+Include in head: <link href="assets/bootstrapdatatables/css/DT_bootstrap.css" rel="stylesheet">
+        		 <link href="assets/selectboxIt/css/jquery.selectBoxIt.css" rel="stylesheet">
+
+Include in body: <script src="assets/bootstrapdatatables/js/jquery.dataTables.js"></script>
+		         <script src="assets/bootstrapdatatables/js/DT_bootstrap.js"></script>
+		         <script src="assets/selectboxIt/js/jquery.selectBoxIt.min.js"></script>
+
+Usage:
+
+<table class="table table-striped table-bordered" id="managed-table">
+    <thead>
+        <tr>
+            <th>Rendering engine</th>
+            <th>Browser</th>
+            <th>Platform(s)</th>
+            <th>Engine version</th>
+            <th>CSS grade</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="gradeX">
+            <td>Misc</td>
+            <td>Lynx</td>
+            <td>Text only</td>
+            <td class="center">-</td>
+            <td class="center">X</td>
+        </tr>
+        <tr class="gradeC">
+            <td>Misc</td>
+            <td>IE Mobile</td>
+            <td>Windows Mobile 6</td>
+            <td class="center">-</td>
+            <td class="center">C</td>
+        </tr>
+        <tr class="gradeC">
+            <td>Misc</td>
+            <td>PSP browser</td>
+            <td>PSP</td>
+            <td class="center">-</td>
+            <td class="center">C</td>
+        </tr>
+        <tr class="gradeU">
+            <td>Other browsers</td>
+            <td>All others</td>
+            <td>-</td>
+            <td class="center">-</td>
+            <td class="center">U</td>
+        </tr>
+    </tbody>
+</table>
+
+To run:
+
+$('#managed-table').dataTable();
+// we also run this since selectboxit is used for the select box
+$('.selectpicker').selectBoxIt();
+
+----
+
+More Details: http://datatables.net/blog/Twitter_Bootstrap_2
+
+Liscense GPL v2 or BSD style available at:
+http://datatables.net/license_gpl2
+http://datatables.net/license_bsd
+
+Made by Allan Jardine

@@ -1,0 +1,36 @@
+Example: http://www.a1alfred.com/legend/admin/comingsoon.html
+		 
+Include in body: <script src="assets/counter/js/jquery.downCount.js"></script>
+		 
+Usage:
+
+<div class="row countdown">
+	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+		<p class="days">00</p><p class="days_ref">days</p>
+	</div>
+	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+		<p class="hours">00</p><p class="hours_ref">hours</p>
+	</div>
+	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+		<p class="minutes">00</p><p class="minutes_ref">minutes</p>
+	</div>
+	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+		<p class="seconds">00</p><p class="seconds_ref">seconds</p>
+	</div>
+</div>
+
+To run:
+
+$('.countdown').downCount({
+    date: '09/09/2014 12:00:00',
+    offset: +10
+});
+
+
+----
+
+More Details: https://github.com/sonnyt/downCount
+
+Liscense MIT
+
+Made by sonnyt

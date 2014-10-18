@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @destinatario.nome %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @destinatario.email %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @destinatario.status %>
+</p>
+
+<p>
+  <strong>Sexo:</strong>
+  <%= @destinatario.sexo %>
+</p>
+
+<%= link_to 'Edit', edit_destinatario_path(@destinatario) %> |
+<%= link_to 'Back', destinatarios_path %>

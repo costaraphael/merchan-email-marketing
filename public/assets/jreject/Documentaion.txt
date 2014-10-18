@@ -1,0 +1,37 @@
+Example: http://www.a1alfred.com/legend/admin/browserrejection.html
+
+Include in head: <link href="assets/jreject/css/jquery.reject.css" rel="stylesheet">
+
+Include in body: <script src="assets/jreject/js/jquery.reject.js"></script>
+
+Simple Usage:
+
+<button type="button" id="reject" class="btn btn-danger btn-block">Reject</button>
+
+To run:
+
+$('#reject').click(function() {  
+    $.reject({  
+        reject: {  
+            safari: true, // Apple Safari  
+            chrome: true, // Google Chrome  
+            firefox: true, // Mozilla Firefox  
+            msie: true, // Microsoft Internet Explorer  
+            opera: true, // Opera  
+            konqueror: true, // Konqueror (Linux)  
+            unknown: true // Everything else  
+        },
+        imagePath: 'assets/jreject/images/'
+    }); // Customized Browsers  
+  
+    return false;  
+});
+
+
+----
+
+More Details: http://jreject.turnwheel.com/
+
+Duel liscense under MIT or GPLv3 (http://www.gnu.org/copyleft/gpl.html)
+
+Made by Steven Bower 

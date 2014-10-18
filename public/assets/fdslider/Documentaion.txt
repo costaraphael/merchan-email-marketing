@@ -1,0 +1,18 @@
+Example: http://www.a1alfred.com/legend/admin/widgets.html
+
+Include in head: <link href="assets/fdslider/css/fd-slider.css" rel="stylesheet">
+
+Include in body: <script src="assets/fdslider/js/fd-slider.min.js"></script>
+
+Simple Usage:
+
+<input type="range" name="corners" min="0" max="1" step="0.1" value="1">
+
+
+----
+
+More Details: https://github.com/freqdec/fd-slider
+
+Dual licensed under the MIT and GPL (http://www.opensource.org/licenses/gpl-license.php)
+
+Made by Brian McAllister

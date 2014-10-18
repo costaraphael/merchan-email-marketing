@@ -1,0 +1,16 @@
+Example: http://www.a1alfred.com/legend/admin/typicons.html
+
+Include in head: <link href="assets/typicons/font/typicons.min.css" rel="stylesheet">
+
+Basic Usage:
+
+<span class="typcn typcn-zoom-in"></span>
+
+
+----
+
+More Details: https://github.com/fontello/typicons.font
+
+Licensed under the Creative Commons Attribution 2.5 License  - http://creativecommons.org/licenses/by/2.5/
+
+Made by Vitaly Puzrin

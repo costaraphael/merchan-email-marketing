@@ -1,0 +1,41 @@
+Example: http://www.a1alfred.com/legend/admin/vectormaps.html
+
+Include in head: <link href="assets/jqrangeslider/css/iThing-min.css" rel="stylesheet">
+
+Include in body: <script src="assets/jqvmap/js/jquery.vmap.min.js" type="text/javascript"></script>
+		         <script src="assets/jqvmap/maps/jquery.vmap.world.js" type="text/javascript"></script>
+		         <script src="assets/jqvmap/maps/continents/jquery.vmap.europe.js" type="text/javascript"></script>
+		         <script src="assets/jqvmap/maps/continents/jquery.vmap.asia.js" type="text/javascript"></script>
+		         <script src="assets/jqvmap/maps/continents/jquery.vmap.north-america.js" type="text/javascript"></script>
+		         <script src="assets/jqvmap/js/jquery.vmap.sampledata.js" type="text/javascript"></script>
+		         <script src="assets/jqvmap/maps/continents/jquery.vmap.australia.js" type="text/javascript"></script>
+		         <script src="assets/jqvmap/maps/continents/jquery.vmap.africa.js" type="text/javascript"></script>
+		         <script src="assets/jqvmap/maps/continents/jquery.vmap.south-america.js" type="text/javascript"></script>
+
+Simple Usage:
+
+<div id="vmap" class="vector-map"></div>
+
+To run:
+
+jQuery('#vmap').vectorMap({
+    map: 'world_en',
+    backgroundColor: '#ffffff',
+    color: '#777777',
+    hoverOpacity: 0.7,
+    selectedColor: '#666666',
+    enableZoom: true,
+    showTooltip: true,
+    values: sample_data,
+    scaleColors: ['#C8EEFF', '#006491'],
+    normalizeFunction: 'polynomial'
+});
+
+
+----
+
+More Details: https://github.com/manifestinteractive/jqvmap
+
+Liscense MIT
+
+Made by Peter Schmalfeldt

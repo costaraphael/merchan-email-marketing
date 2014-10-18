@@ -1,0 +1,35 @@
+Example: http://www.a1alfred.com/legend/admin/biccalendar.html
+
+Include in head: <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+        		 <link href="assets/biccalendar/css/bic_calendar.css" rel="stylesheet">
+
+Include in body: <script src="assets/biccalendar/js/bic_calendar.min.js"></script>
+
+Usage:
+
+<div id="cal"></div>
+
+To run:
+
+mesos = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+dias = ["M", "T", "W", "T", "F", "S", "S"];
+
+$('#cal').bic_calendar({
+    nombresMes: mesos,
+    dias: dias,
+    req_ajax: {
+    	type: 'get',
+    	url: 'http://bic.cat/bic_calendar/index.php'
+    }
+});
+
+See more details for more info and examples
+
+----
+
+More Details: https://github.com/bichotll/bic_calendar
+
+Liscense Apache 2
+
+Made by bichotll

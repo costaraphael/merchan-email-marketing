@@ -1,0 +1,34 @@
+Example: http://www.a1alfred.com/legend/admin/vexalerts.html
+
+Include in head: <link href="assets/vex/css/vex.css" rel="stylesheet" />
+		         <link href="assets/vex/css/vex-theme-default.css" rel="stylesheet" />
+		         <link href="assets/vex/css/vex-theme-os.css" rel="stylesheet" />
+		         <link href="assets/vex/css/vex-theme-top.css" rel="stylesheet" />
+		         <link href="assets/vex/css/vex-theme-plain.css" rel="stylesheet" />
+		         <link href="assets/vex/css/vex-theme-flat-attack.css" rel="stylesheet" />
+		         <link href="assets/vex/css/vex-theme-wireframe.css" rel="stylesheet" />
+
+Include in body: <script src="assets/vex/js/vex.js"></script>
+       			 <script src="assets/vex/js/vex.dialog.js"></script>
+
+Basic Usage:
+
+<button type="button" class="demo-alert btn btn-warning btn-block btn-gap">Alert</button>
+
+To run:
+
+$('.demo-alert').click(function(){
+	vex.defaultOptions.className = 'vex-theme-plain';
+	vex.dialog.open({
+		message: 'This is alot of alerts.'
+	});
+});
+
+
+----
+
+More Details: https://github.com/hubspot/vex
+
+Liscense MIT
+
+Made by HubSpot Inc

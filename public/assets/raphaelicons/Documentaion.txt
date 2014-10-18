@@ -1,0 +1,18 @@
+Example: http://www.a1alfred.com/legend/admin/raphaelicons.html
+
+Include in head: <link href="assets/raphaelicons/css/raphaelicons.css" rel="stylesheet">
+
+Basic Usage:
+
+<span class="raph-icon icon"></span>
+
+Then place a or b or c etc within the span
+
+
+----
+
+More Details: http://icons.marekventur.de/
+
+Liscense Apache 2
+
+Made by Marek Ventur

@@ -1,0 +1,46 @@
+Example: http://www.a1alfred.com/legend/admin/stepswizard.html
+
+Include in head: <link href="assets/stepswizard/css/jquery.steps.css" rel="stylesheet">
+
+Include in body: <script src="assets/stepswizard/js/jquery.steps.min.js"></script>
+
+Basic Usage:
+
+<div id="wizard">
+    <h2>Basic Details</h2>
+    <section>
+
+    </section>
+
+    <h2>Main Options</h2>
+    <section>
+
+    </section>
+
+    <h2>About Me</h2>
+    <section>
+
+    </section>
+
+    <h2>Forth Step</h2>
+    <section>
+        
+    </section>
+</div>
+
+To run:
+
+$("#wizard").steps({
+    headerTag: "h2",
+    bodyTag: "section",
+    transitionEffect: "slideLeft"
+});
+
+
+----
+
+More Details: https://github.com/rstaib/jquery-steps/
+
+Liscense MIT
+
+Made by Rafael Staib

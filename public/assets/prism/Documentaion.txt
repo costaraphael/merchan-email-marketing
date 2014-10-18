@@ -1,0 +1,11 @@
+Include in head: <link href="assets/prism/css/prism.css" rel="stylesheet">
+
+Include in body: <script src="assets/prism/js/prism.js"></script>
+
+----
+
+More Details: https://github.com/LeaVerou/prism
+
+Liscense MIT
+
+Made by Lea Verou

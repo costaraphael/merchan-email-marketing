@@ -1,0 +1,15 @@
+Example: http://www.a1alfred.com/legend/admin/pictonicons.html
+
+Include in head: <link href="assets/pictonic/css/pictonic.css" rel="stylesheet">
+
+Basic Usage:
+
+<span class="icon-amazon"></span>
+
+----
+
+More Details: https://pictonic.co/free
+
+Liscense https://pictonic.co/license
+
+Made by Pictonic

@@ -1,0 +1,28 @@
+Example: http://www.a1alfred.com/legend/admin/chosen.html
+
+Include in head: <link href="assets/prism/css/prism.css" rel="stylesheet">
+        		 <link href="assets/chosen/css/chosen.css" rel="stylesheet">
+
+Include in body: <script src="assets/prism/js/prism.js"></script>
+				 <script src="assets/chosen/js/chosen.jquery.min.js"></script>
+
+Simple Usage:
+
+<select data-placeholder="Choose a Country..." id="chosen-select" tabindex="2">
+    <option value=""></option>
+    <option value="United States">United States</option>
+    <option value="United Kingdom">United Kingdom</option>
+</select>
+  
+To run:
+
+$("#chosen-select").chosen();
+
+
+----
+
+More Details: https://github.com/harvesthq/chosen
+
+Liscense MIT
+
+Made by Patrick Filler

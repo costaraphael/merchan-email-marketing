@@ -1,0 +1,30 @@
+<%= simple_form_for (@usuario), :html => {:class => 'form-horizontal'} do |f| %>
+    <% if @usuario.errors.any? %>
+        <div class="alert alert-danger alert-dismissable">
+          <h4><%= pluralize(@usuario.errors.count, 'erro impediu', 'erros impediram') %> que este usuário fosse salvo.</h4>
+
+          <ul>
+            <% @usuario.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+    <div class="row">
+      <div class="col-md-6">
+        <%= f.association :grupo_usuario, label: 'Grupo de usuário', prompt: 'Escolha um Grupo', input_html: {class: 'form-control'} %>
+        <%= f.association :role, label: 'Nível de acesso', prompt: 'Escolha um Grupo', input_html: {class: 'form-control'} %>
+        <%= f.input :nome, label: 'Nome', input_html: {class: 'form-control'} %>
+        <%= f.input :login, label: 'Login', input_html: {class: 'form-control'} %>
+      </div>
+      <% if @usuario.new_record? %>
+          <div class="col-md-6">
+            <%= f.input :senha, as: :password, label: 'Senha', input_html: {class: 'form-control'} %>
+            <%= f.input :senha_confirmation, as: :password, label: 'Confirmar senha', input_html: {class: 'form-control'} %>
+          </div>
+      <% end %>
+    </div>
+    <div style="margin-top: 20px">
+      <%= f.button :submit %>
+    </div>
+<% end %>

@@ -1,0 +1,21 @@
+Example: http://www.a1alfred.com/legend/admin/toastralerts.html
+
+Include in head: <link href="assets/toastr/css/toastr.min.css" rel="stylesheet">
+
+Include in body: <script src="assets/toastr/js/toastr.js"></script>
+        		 <script src="assets/toastr/js/glimpse.toastr.js"></script>
+
+To run:
+
+$(document).ready(function() {
+	toastr.info('Page Loaded!');
+});
+
+
+----
+
+More Details: https://github.com/CodeSeven/toastr
+
+Liscense MIT
+
+Made by John Papa and Hans Fjällemark

@@ -1,0 +1,31 @@
+<h1>Listing destinatarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Email</th>
+      <th>Status</th>
+      <th>Sexo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @destinatarios.each do |destinatario| %>
+      <tr>
+        <td><%= destinatario.nome %></td>
+        <td><%= destinatario.email %></td>
+        <td><%= destinatario.status %></td>
+        <td><%= destinatario.sexo %></td>
+        <td><%= link_to 'Show', destinatario %></td>
+        <td><%= link_to 'Edit', edit_destinatario_path(destinatario) %></td>
+        <td><%= link_to 'Destroy', destinatario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Destinatario', new_destinatario_path %>

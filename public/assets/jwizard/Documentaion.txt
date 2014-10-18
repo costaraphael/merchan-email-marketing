@@ -1,0 +1,34 @@
+Example: http://www.a1alfred.com/legend/admin/jwizard.html
+
+Include in head: <link href="assets/bootstrapui/css/jquery-ui-1.9.2.custom.css" rel="stylesheet">
+       			 <link href="assets/jwizard/css/jquery.jWizard.min.css" rel="stylesheet">
+
+Include in body: <script src="assets/jwizard/js/jquery.jWizard.min.js"></script>
+
+Simple Usage:
+
+<form id="wizard">
+	<div title="Step 1">
+	    
+	</div>
+	<div title="Step 2">
+		
+	</div>
+	<div title="Step 3">
+	    
+	</div>
+</form>
+
+
+To run:
+
+$("#wizard").jWizard();
+
+
+----
+
+More Details: https://github.com/dominicbarnes/jWizard
+
+Liscense MIT
+
+Made by Dominic Barnes

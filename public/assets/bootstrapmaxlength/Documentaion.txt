@@ -1,0 +1,21 @@
+Example: http://www.a1alfred.com/legend/admin/formcomponents.html
+
+Include in body: <script src="assets/bootstrapmaxlength/js/bootstrap-maxlength.min.js"></script>
+
+Simple Usage:
+
+<input id="mxlenght" maxlength="25" class="form-control" type="text" />
+
+To run:
+
+$("#mxlenght").maxlength({
+    alwaysShow: true
+});
+
+----
+
+More Details: https://github.com/mimo84/bootstrap-maxlength/
+
+Liscense MIT
+
+Made by Maurizio Napoleoni

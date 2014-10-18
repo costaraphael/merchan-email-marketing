@@ -1,0 +1,22 @@
+Example: http://www.a1alfred.com/legend/admin/toggles.html
+
+Include in head: <link href="assets/bootstrapswitch/css/bootstrap-switch.css" rel="stylesheet">
+
+Include in body: <script src="assets/bootstrapswitch/js/bootstrap-switch.min.js"></script>
+
+Simple Usage:
+
+<div class="form-group"> 
+	<div class="make-switch">
+	    <input type="checkbox" checked>
+	</div>
+</div>
+
+
+----
+
+More Details: http://www.larentis.eu/switch/
+
+Liscense Apache 2
+
+Made by Mattia Larentis

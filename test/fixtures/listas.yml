@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  usuario_id: 
+  publica: false
+  global: false
+
+two:
+  nome: MyString
+  usuario_id: 
+  publica: false
+  global: false

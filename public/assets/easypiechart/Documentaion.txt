@@ -1,0 +1,22 @@
+Example: http://www.a1alfred.com/legend/admin/charts3.html
+
+Include in body: <script src="assets/easypiechart/js/jquery.easypiechart.min.js"></script>
+
+Simple Usage:
+
+<p id="chart" class="text-center" data-percent="47">
+
+To run:
+
+$('#chart').easyPieChart({
+	easing: 'easeOutBounce'
+});
+
+
+----
+
+More Details: https://github.com/rendro/easy-pie-chart
+
+Dual licensed under the MIT and GPL (http://www.opensource.org/licenses/gpl-license.php)
+
+Made by Robert Fleischmann

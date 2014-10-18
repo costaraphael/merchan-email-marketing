@@ -1,0 +1,17 @@
+Example: http://www.a1alfred.com/legend/admin/inputfilestyle.html
+
+Include in body: <script src="assets/bootstrapfilestyle/js/bootstrap-filestyle.js"></script>
+
+Usage:
+
+<input type="file" class="filestyle" data-classButton="btn btn-default btn-lg" data-input="false">
+
+More examples at the page and at more details
+
+----
+
+More Details: http://dev.tudosobreweb.com.br/bootstrap-filestyle/
+
+Liscense MIT
+
+Made by Markus Vinicius da Silva Lima

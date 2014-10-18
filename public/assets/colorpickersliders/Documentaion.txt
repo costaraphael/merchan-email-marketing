@@ -1,0 +1,45 @@
+Example: http://www.a1alfred.com/legend/admin/colorpicker.html
+
+Include in head: <link href="assets/colorpickersliders/css/jquery.colorpickersliders.css" rel="stylesheet">
+
+Include in body: <script src="assets/colorpickersliders/js/jquery.colorpickersliders.js"></script>
+       			 <script src="assets/colorpickersliders/js/tinycolor.js"></script>
+
+Simple Usage:
+
+<span class="rgb-demo"></span>
+  
+To run:
+
+$(".rgb-demo").ColorPickerSliders({
+    flat: true,
+    swatches: false,
+    order: {
+        rgb: 1,
+        opacity: 2
+    },
+    labels: {
+        rgbred: 'Red',
+        rgbgreen: 'Green',
+        rgbblue: 'Blue'
+    }
+});	
+
+
+----
+
+More Details: https://github.com/istvan-meszaros/css-colorpickersliders
+
+Liscense Apache 2
+
+Made by István Ujj-Mészáros
+
+----
+
+Tiny Color
+
+More Details: https://github.com/bgrins/TinyColor
+
+Liscense MIT
+
+Made by Brian Grinstead

@@ -1,0 +1,38 @@
+Example: http://www.a1alfred.com/legend/admin/tables.html
+
+Include in head: <link href="assets/tablecloth/css/tablecloth.css" rel="stylesheet">
+
+Include in body: <script src="assets/tablecloth/js/jquery.tablesorter.min.js"></script>
+        		 <script src="assets/tablecloth/js/jquery.tablecloth.js"></script>
+
+Basic Usage:
+
+<table class="table" id="darktable">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Date registered</th>
+            <th>Role</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Mary A. Lewis</td>
+            <td>2007/02/01</td>
+            <td>Staff</td>
+        </tr>
+    </tbody>
+</table>
+
+To run:
+
+$("#darktable").tablecloth();
+
+
+----
+
+More Details: https://github.com/bwsewell/tablecloth
+
+Liscense MIT
+
+Made by Brian Sewell

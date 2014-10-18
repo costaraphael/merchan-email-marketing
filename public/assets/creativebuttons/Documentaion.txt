@@ -1,0 +1,17 @@
+Example: http://www.a1alfred.com/legend/admin/creativebuttons.html
+
+Include in head: <link href="assets/creativebuttons/css/styles.css" rel="stylesheet">
+
+Include in body: <script src="assets/creativebuttons/js/modernizr.custom.js"></script>
+        		 <script src="assets/creativebuttons/js/classie.js"></script>
+
+Loads of examples on: http://www.a1alfred.com/legend/admin/creativebuttons.html
+
+----
+
+More Details: http://tympanus.net/codrops/2013/06/13/creative-button-styles/
+
+Liscense http://tympanus.net/codrops/licensing/
+
+Made by Mary Lou
+http://tympanus.net/

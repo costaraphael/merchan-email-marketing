@@ -1,0 +1,39 @@
+Example: http://www.a1alfred.com/legend/admin/messengeralerts.html
+
+Include in head: <link href="assets/messenger/css/messenger.css" rel="stylesheet" />
+		         <link href="assets/messenger/css/messenger-theme-ice.css" rel="stylesheet" />
+		         <link href="assets/messenger/css/messenger-theme-future.css" rel="stylesheet" />
+		         <link href="assets/messenger/css/messenger-theme-flat.css" rel="stylesheet" />
+		         <link href="assets/messenger/css/messenger-theme-block.css" rel="stylesheet" />
+		         <link href="assets/messenger/css/messenger-theme-air.css" rel="stylesheet" />
+		         <link href="assets/messenger/css/messenger-spinner.css" rel="stylesheet" />
+
+Include in body: <script src="assets/messenger/js/messenger.min.js"></script>
+        		 <script src="assets/messenger/js/messenger-theme-flat.js"></script>
+        		 <script src="assets/messenger/js/messenger-theme-future.js"></script>
+
+Basic Usage:
+
+<button type="button" onclick="messenger()" class="btn btn-default btn-block btn-gap">Ice Theme</button>
+
+To run:
+
+function messenger() {
+	Messenger.options = {
+	    extraClasses: 'messenger-fixed messenger-on-bottom messenger-on-right',
+	    theme: 'ice'
+	}
+	Messenger().post({
+	  message: 'There was an cat snooping around your request.',
+	  showCloseButton: true
+	});
+}
+
+
+----
+
+More Details: https://github.com/ace-subido/css3-microsoft-metro-buttons
+
+Licensed under the Creative Commons Attribution 3 License  - http://creativecommons.org/licenses/by/3/
+
+Made by Ace Subido

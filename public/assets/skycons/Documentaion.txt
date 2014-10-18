@@ -1,0 +1,25 @@
+Example: http://www.a1alfred.com/legend/admin/widgets.html
+
+Include in body: <script src="assets/skycons/js/skycons.js"></script>
+
+Basic Usage:
+
+<canvas id="icon1" width="200" height="200" style="width: 100%"></canvas>
+
+To run:
+
+var skycons = new Skycons({"color": "#aaa"});
+
+  // you can add a canvas by it's ID...
+  skycons.add("icon1", Skycons.PARTLY_CLOUDY_NIGHT);
+
+  // start animation!
+  skycons.play();
+ });
+
+
+----
+
+More Details: https://github.com/darkskyapp/skycons
+
+Made by ironwallaby

@@ -1,0 +1,24 @@
+Example: http://www.a1alfred.com/legend/admin/lightbox.html
+
+Include in head: <link href="assets/boxer/css/jquery.fs.boxer.css" rel="stylesheet">
+
+Include in body: <script src="assets/boxer/js/jquery.fs.boxer.min.js"></script>
+
+Simple Usage:
+
+<a href="assets/img/gallery/1.jpg" class="boxer thumbnail" title="Caption">
+	<img src="assets/img/news/1.jpg" alt="Thumbnail" />
+</a>
+
+To run:
+
+$(".boxer").boxer();
+
+
+----
+
+More Details: https://github.com/benplum/Boxer
+
+Liscense MIT
+
+Made by Ben Plum

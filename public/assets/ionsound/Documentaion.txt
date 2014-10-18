@@ -1,0 +1,29 @@
+Example: http://www.a1alfred.com/legend/admin/ionsoundalerts.html
+
+Include in body: <script src="assets/ionsound/js/ion.sound.min.js"></script>
+
+Simple Usage:
+
+<button type="button" onclick="water_droplet()" class="btn btn-danger btn-block btn-gap">Water Droplet</button>
+
+To run:
+
+function water_droplet() {
+	$.ionSound({
+		sounds: [
+	    	"water_droplet"
+	    ],
+		     path: "assets/ionsound/sounds/",
+			 multiPlay: false,
+			 volume: "0.3"
+	});
+	$.ionSound.play('water_droplet');
+}
+
+----
+
+More Details: https://github.com/IonDen/ion.sound
+
+Liscense MIT
+
+Made by Denis Ineshin

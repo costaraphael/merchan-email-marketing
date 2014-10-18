@@ -1,0 +1,33 @@
+Example: http://www.a1alfred.com/legend/admin/wysihtml5.html
+
+Include in head: <link href="assets/wysihtml5/css/bootstrap-wysihtml5.css" rel="stylesheet">
+
+Include in body: <script src="assets/wysihtml5/js/wysihtml5-0.3.0.min.js"></script>
+      			 <script src="assets/wysihtml5/js/bootstrap-wysihtml5.js"></script>
+
+Basic Usage:
+
+<textarea id="textarea" class="form-control" placeholder="Enter text ..." rows="8"></textarea>
+
+To run:
+
+$('#textarea').wysihtml5();
+
+
+----
+
+More Details: https://github.com/jhollingworth/bootstrap-wysihtml5/
+
+Liscense MIT
+
+Made by JFHollingworth
+
+-----
+
+wysihtml5
+
+More Details: https://github.com/xing/wysihtml5
+
+Liscense MIT
+
+Made by XING AG

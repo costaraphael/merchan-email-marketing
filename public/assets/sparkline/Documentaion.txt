@@ -1,0 +1,32 @@
+Example: http://www.a1alfred.com/legend/admin/charts3.html
+
+Include in body: <script src="assets/sparkline/js/jquery.sparkline.js"></script>
+
+Simple Usage:
+
+<div id="sparkline" class="sparkline"></div>
+
+To run:
+
+("#sparkline").sparkline([5,9,4,8,4,6,8,11,6,5,8,10 ], {
+	type: 'line',
+	width: '100%',
+	height: '100px',
+	lineColor: '#39c',
+	fillColor: '#ffffff',
+	lineWidth: 5,
+	spotColor: '#cccccc',
+	highlightSpotColor: '#cccccc',
+	highlightLineColor: '#777777',		    
+	minSpotColor: '#cccccc',
+	maxSpotColor: '#cccccc'
+});
+
+
+----
+
+More Details: http://omnipotent.net/jquery.sparkline/ 
+
+Liscense BSD
+
+Made by Gareth Watts

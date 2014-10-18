@@ -1,0 +1,22 @@
+Example: http://www.a1alfred.com/legend/admin/socialbootstrap.html
+
+Include in head: <link href="assets/socialbootstrapbuttons/css/social-buttons.css" rel="stylesheet">
+
+Basic example for facebook:
+
+<button class="btn btn-facebook btn-block btn-gap"><i class="icon-facebook"></i> | Connect with Facebook</button>
+
+Basic example for twitter:
+
+<button class="btn btn-twitter btn-block btn-gap"><i class="icon-twitter"></i> | Connect with Twitter</button>
+
+More examples on the page
+
+
+----
+
+More Details: https://github.com/noizwaves/bootstrap-social-buttons
+
+Liscense Apache 2
+
+Made by Adam Neumann

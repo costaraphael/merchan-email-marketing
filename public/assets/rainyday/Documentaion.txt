@@ -1,0 +1,33 @@
+Example: http://www.a1alfred.com/legend/admin/lockscreen.html
+
+Include in body: <script src="assets/rainyday/js/rainyday.min.js"></script>
+
+Basic Usage:
+
+<img id="background" alt="background" class="hidden" src="assets/img/big/7.jpg" />
+<div id="cholder">
+	<canvas id="canvas"></canvas>
+</div>
+
+To run:
+
+window.onload = demo;
+function demo() {
+	var engine = new RainyDay('canvas', 'background', window.innerWidth, window.innerHeight);
+		engine.gravity = engine.GRAVITY_NON_LINEAR;
+		engine.trail = engine.TRAIL_DROPS;
+		engine.VARIABLE_GRAVITY_ANGLE = Math.PI / 8;
+		engine.rain([
+			engine.preset(0, 2, 0.5),
+			engine.preset(4, 4, 1)
+		], 50);
+}
+
+
+----
+
+More Details: https://github.com/maroslaw/rainyday.js
+
+Liscense GNU (http://www.gnu.org/copyleft/gpl.html)
+
+Made by Marek Brodziak

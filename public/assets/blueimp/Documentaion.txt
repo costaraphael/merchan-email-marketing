@@ -1,0 +1,19 @@
+Example: http://www.a1alfred.com/legend/admin/gallery.html
+
+Include in head: <link href="assets/blueimp/css/blueimp-gallery.min.css" rel="stylesheet">
+                 <link href="assets/blueimp/css/bootstrap-image-gallery.min.css" rel="stylesheet">
+
+Include in body: <script src="assets/blueimp/js/jquery.blueimp-gallery.min.js"></script>
+        		 <script src="assets/blueimp/js/bootstrap-image-gallery.min.js"></script>
+
+There is a lot of code for this so please see example and the gallery function
+
+You can also see more details for info
+
+----
+
+More Details: https://github.com/blueimp/Gallery
+
+Liscense MIT 
+
+Made by Sebastian Tschan

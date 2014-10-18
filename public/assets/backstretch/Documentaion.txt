@@ -1,0 +1,34 @@
+Example: http://www.a1alfred.com/legend/admin/maintenance.html
+		 http://www.a1alfred.com/legend/admin/comingsoon.html
+		 
+Include in body: <script src="assets/backstretch/js/jquery.backstretch.min.js"></script>
+		 
+Usage:
+
+<div class="maintenance"></div>
+
+To run:
+
+$(".maintenance").backstretch("assets/img/big/5.jpg");
+
+Thats for one Image
+
+For a slide show
+
+To run:
+
+$(".maintenance").backstretch([
+  "assets/img/big/1.jpg"
+, "assets/img/big/2.jpg"
+, "assets/img/big/3.jpg"
+], {duration: 3000, fade: 750});
+
+This will create a slow moving slideshow
+
+----
+
+More Details: https://github.com/srobbin/jquery-backstretch
+
+Liscense MIT
+
+Made by Scott Robbin

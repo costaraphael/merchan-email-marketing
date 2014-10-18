@@ -1,0 +1,17 @@
+Example: http://www.a1alfred.com/legend/admin/components.html
+
+Include in head: <link href="assets/bootstrapmodal/css/bootstrap-modal-bs3patch.css" rel="stylesheet" />
+        		 <link href="assets/bootstrapmodal/css/bootstrap-modal.css" rel="stylesheet" />
+
+Include in body: <script src="assets/bootstrapmodal/js/bootstrap-modalmanager.js"></script>
+        		 <script src="assets/bootstrapmodal/js/bootstrap-modal.js"></script>
+
+There are plenty of examples on the components page
+
+----
+
+More Details: https://github.com/jschr/bootstrap-modal/
+
+Liscense Apache 2
+
+Made by Jordan Schroter

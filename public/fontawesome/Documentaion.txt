@@ -1,0 +1,17 @@
+Example: http://www.a1alfred.com/legend/admin/fontawesome.html
+
+Included in the styles.css and .less
+
+Loads of examples on: http://fontawesome.io
+
+Typical usage
+
+<i class="fa fa-home"></i>
+
+----
+
+More Details: http://fontawesome.io
+
+Liscense MIT
+
+Made by Dave Gandy

@@ -1,0 +1,29 @@
+Example: http://www.a1alfred.com/legend/admin/markdown.html
+
+Include in head: <link href="assets/markdown/css/bootstrap-markdown.min.css" rel="stylesheet">
+
+Include in body: <script src="assets/markdown/js/markdown.js"></script>
+		         <script src="assets/markdown/js/to-markdown.js"></script>
+		         <script src="assets/markdown/js/bootstrap-markdown.js"></script>
+
+
+Check out the examples at http://toopay.github.io/bootstrap-markdown/
+or see the code on http://www.a1alfred.com/legend/admin/markdown.html
+
+----
+
+More Details: http://daringfireball.net/projects/markdown/
+
+Liscense Mit
+
+Made by Christoph Dorn
+
+-------
+
+Bootstrap Markdown
+
+More Details: http://toopay.github.io/bootstrap-markdown/
+
+Liscense Apache 2
+
+Made by Taufan Aditya

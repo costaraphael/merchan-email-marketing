@@ -1,0 +1,20 @@
+Example: http://www.a1alfred.com/legend/admin/formcomponents.html
+
+Include in body: <script src="assets/knob/js/jquery.knob.js"></script>
+
+Simple Usage:
+
+<input type="text" value="50" class="dial">
+
+To run:
+
+$(".dial").knob();
+
+
+----
+
+More Details: https://github.com/aterrien/jQuery-Knob
+
+Duel liscensed under MIT or GPL (http://www.gnu.org/licenses/gpl.html)
+
+Made by Anthony Terrien

@@ -1,0 +1,26 @@
+Example: http://www.a1alfred.com/legend/admin/humanealerts.html
+
+Include in head: <link href="assets/icheck/skins/all.css" rel="stylesheet">
+
+Include in body: <script src="assets/icheck/js/jquery.icheck.min.js"></script>
+
+Simple Usage:
+
+<input tabindex="5" type="checkbox" class="skin-minimal">
+
+To run:
+
+$('.skin-minimal').iCheck({
+	checkboxClass: 'icheckbox_minimal',
+	radioClass: 'iradio_minimal',
+	increaseArea: '20%'
+});
+
+
+----
+
+More Details: https://github.com/fronteed/iCheck
+
+Liscense MIT
+
+Made by Damir Foy

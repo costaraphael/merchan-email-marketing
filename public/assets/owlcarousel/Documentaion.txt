@@ -1,0 +1,30 @@
+Example: http://www.a1alfred.com/legend/admin/dragwidgets.html
+
+Include in head: <link href="assets/owlcarousel/css/owl.carousel.css" rel="stylesheet">
+       			 <link href="assets/owlcarousel/css/owl.theme.css" rel="stylesheet">
+
+Include in body: <script src="assets/owlcarousel/js/owl.carousel.min.js"></script>
+
+Simple Usage:
+
+<div id="owl-example" class="owl-carousel">
+  <div class="padded">Duis vehicula erat quis nunc tempor rutrum. Nam nec nisi sit amet lorem lacinia dictum non quis arcu. Sed imperdiet erat nec dictum volutpat.</div>
+  <div class="padded"> Vestibulum vulputate odio tortor, eget scelerisque ante venenatis non. Donec ac leo at nibh elementum convallis.</div>
+  <div class="padded">Sed consequat, massa a hendrerit ultricies, neque lectus sollicitudin massa, sed vestibulum eros tortor congue ipsum.</div>
+  <div class="padded">Proin mollis arcu in dignissim dignissim. Maecenas faucibus eu urna id fermentum. Donec elementum mi erat, vel varius nisl vulputate ultrices.</div>
+  <div class="padded">Sed congue nunc sed elit tincidunt lacinia. Proin nec imperdiet dui, in facilisis tortor. Suspendisse potenti.</div>
+  <div class="padded">Mauris suscipit urna id risus porta, eu tempus massa luctus. Proin euismod sapien ac rhoncus dapibus. Donec sodales dui ac nisl mattis congue.</div>
+  <div class="padded">Ut in dui sed nulla rutrum sagittis. Proin id ipsum sed est imperdiet sagittis. Pellentesque tempus at orci egestas cursus.</div>
+</div>
+
+To run:
+
+$("#owl-example").owlCarousel({ items: 2 });
+
+
+----
+More Details: https://github.com/OwlFonk/OwlCarousel
+
+Liscense MIT
+
+Made by Bartosz Wojciechowski

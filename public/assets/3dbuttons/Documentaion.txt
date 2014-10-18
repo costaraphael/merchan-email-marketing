@@ -1,0 +1,41 @@
+Modified Css file for theme
+
+----
+
+Example: http://www.a1alfred.com/legend/admin/3dbuttons.html
+
+Include in head: <link href="assets/3dbuttons/css/3dbutton.css" rel="stylesheet">
+
+Should always start with .dbtn, then follow with size, small, big or large. e.g class="dbtn big"
+
+For color add one of these:
+twitter
+facebook
+pinterest
+gplus
+rss
+dribbble
+linkedin
+flickr
+stumble
+vimeo
+
+followed by either "-small" if you chose small or "-big" if you chose big
+
+It should look a little like this
+
+<a class="dbtn big flickr-big"></a>
+
+If you don't want the social logo
+
+<a class="dbtn big flickr-big no-image"></a>
+
+----
+
+Original files: http://www.flashuser.net/css3-social-media-buttons
+
+Made by Alin
+Twitter: https://twitter.com/flashuser
+Facebook: https://www.facebook.com/flashuserdesign?sk=app_256531707697074
+Google+: https://plus.google.com/107354570077126583477
+

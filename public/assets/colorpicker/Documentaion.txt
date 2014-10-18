@@ -1,0 +1,23 @@
+Example: http://www.a1alfred.com/legend/admin/colorpicker.html
+
+Include in head: <link href="assets/colorpicker/css/bootstrap-colorpicker.min.css" rel="stylesheet">
+
+Include in body: <script src="assets/colorpicker/js/bootstrap-colorpicker.min.js"></script>
+
+Simple Usage:
+
+<div class="form-group">
+	<input type="text" class="form-control bscp" value="#8fff00" id="cp1" >
+</div>
+  
+To run:
+$('#cp1').colorpicker();
+
+
+----
+
+More Details: http://mjaalnir.github.io/bootstrap-colorpicker/
+
+Liscense Apache 2
+
+Made by Stefan Petre

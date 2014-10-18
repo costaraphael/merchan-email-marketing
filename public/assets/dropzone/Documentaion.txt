@@ -1,0 +1,22 @@
+Example: http://www.a1alfred.com/legend/admin/dropzone.html
+
+Include in head: <link href="assets/dropzone/css/dropzone.css" rel="stylesheet">
+
+Include in body: <script src="assets/dropzone/js/dropzone.min.js"></script>
+
+Simple Usage:
+
+<form action="assets/dropzone/test.php" class="dropzone">
+  <div class="fallback">
+    <input name="file" type="file" multiple />
+  </div>
+</form>
+
+
+----
+
+More Details: https://github.com/enyo/dropzone
+
+Liscense MIT
+
+Made by Matias Meno

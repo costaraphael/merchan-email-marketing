@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!--<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">-->
+  <title>Merchan</title>
+  <link href="/assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href="/assets/css/styles.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script src="/assets/js/html5shiv.js"></script>
+  <script src="/assets/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<section class="login">
+  <div class="login-panel" style="height: <%= notice ? '260' : '200' %>px">
+    <% if notice %>
+        <div class="alert alert-warning">
+          <p><%= notice %></p>
+        </div>
+    <% end %>
+    <h3 class="text-muted">Login</h3>
+
+    <%= form_for :login do |f| %>
+        <%= f.text_field :login, class: 'form-control', placeholder: 'Login' %>
+
+        <div class="input-group">
+          <%= f.password_field :senha, class: 'form-control', placeholder: 'Senha' %>
+          <span class="input-group-btn">
+				        <%= f.submit 'Entrar', class: 'btn btn-lg btn-default' %>
+				      </span>
+        </div>
+    <% end %>
+  </div>
+</section>
+<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+<script>
+    $('.login-panel').fadeIn(800);
+    $(".login").backstretch("/assets/img/big/1.jpg");
+</script>
+</body>
+</html>

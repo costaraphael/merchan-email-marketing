@@ -1,0 +1,26 @@
+Example: http://www.a1alfred.com/legend/admin/bootstraptokenfield.html
+
+Include in head: <link href="assets/typeahead/css/typeahead.js-bootstrap.css" rel="stylesheet">
+        		 <link href="assets/bootstraptokenfield/css/bootstrap-tokenfield.css" rel="stylesheet">
+
+Include in body: <script src="assets/typeahead/js/typeahead.min.js"></script>
+        		 <script src="assets/bootstraptokenfield/js/bootstrap-tokenfield.min.js"></script>
+
+Simple Usage:
+
+<div class="form-group"> 
+	<input type="text" class="form-control" id="tokenfield" />
+</div>
+
+To run:
+
+$('#tokenfield2').tokenfield();
+
+
+----
+
+More Details: https://github.com/sliptree/bootstrap-tokenfield
+
+Liscense MIT
+
+Made by Illimar Tambek

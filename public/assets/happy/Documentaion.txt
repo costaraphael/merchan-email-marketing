@@ -1,0 +1,46 @@
+Example: http://www.a1alfred.com/legend/admin/validation.html
+
+Include in body: <script src="assets/happy/js/happy.js"></script>
+        		 <script src="assets/happy/js/happy.methods.js"></script>
+
+Usage:
+
+<form id="awesomeForm" action="" role="form" method="post">
+	<div class="form-group">
+		<label>Name</label>
+		<input id="yourName" type="text" class="form-control" placeholder="Name" name="name" />
+	</div>
+	<div class="form-group">
+		<label>Email</label>
+		<input id="email" type="text" class="form-control"  placeholder="Email" name="email" class="" />
+	</div>
+	<button type="submit" class="btn btn-default">go</button>
+</form>
+
+To run it:
+
+$('#awesomeForm').isHappy({
+	fields: {
+		// reference the field you're talking about, probably by `id`
+		// but you could certainly do $('[name=name]') as well.
+		'#yourName': {
+			required: true,
+			message: 'Might we inquire your name'
+		},
+		'#email': {
+			required: true,
+			message: 'How are we to reach you sans email??',
+			test: happy.email // this can be *any* function that returns true or false
+		}
+	}
+});
+
+Its a basic validation alert which shows red text above the incorrect input, you can easily style it
+
+----
+
+More Details: https://github.com/andyet/Happy.js
+
+Liscense MIT
+
+Made by Henrik Joreteg

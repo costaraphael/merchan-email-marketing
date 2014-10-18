@@ -1,0 +1,25 @@
+Example: http://www.a1alfred.com/legend/admin/bootstrapselect.html
+
+Include in head: <link href="assets/bootstrapselect/css/bootstrap-select.min.css" rel="stylesheet">
+
+Include in body: <script src="assets/bootstrapselect/js/bootstrap-select.min.js"></script>
+
+Simple Usage:
+
+<select class="selectpicker">
+    <option>Mustard</option>
+    <option>Ketchup</option>
+    <option>Relish</option>
+</select>
+
+To run:
+
+$('.selectpicker').selectpicker();		
+
+----
+
+More Details: http://silviomoreto.github.io/bootstrap-select/
+
+Liscense MIT
+
+Made by Silvio Moreto, Ana Carolina, caseyjhol, and Matt Bryson.

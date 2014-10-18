@@ -1,0 +1,22 @@
+Example: http://www.a1alfred.com/legend/admin/formcomponents.html
+
+Include in head: <link href="assets/fseditor/css/fseditor.css" rel="stylesheet">
+
+Include in body: <script src="assets/fseditor/js/jquery.fseditor-min.js"></script>
+
+Simple Usage:
+
+<textarea rows="5" class="form-control"></textarea>
+
+To run:
+
+$("textarea").fseditor();
+
+
+----
+
+More Details: http://github.com/burakson/fseditor
+
+Liscense MIT
+
+Made by Brian Grinstead

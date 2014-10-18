@@ -1,0 +1,30 @@
+Example: http://www.a1alfred.com/legend/admin/bootstrapmultiselect.html
+
+Include in head: <link href="assets/bootstrapmultiselect/css/bootstrap-multiselect.css" rel="stylesheet">
+
+Include in body: <script src="assets/bootstrapmultiselect/js/bootstrap-multiselect.js"></script>
+
+Simple Usage:
+
+<select id="multiselect" multiple="multiple">
+  <option value="cheese">Cheese</option>
+  <option value="tomatoes">Tomatoes</option>
+  <option value="mozarella">Mozzarella</option>
+  <option value="mushrooms">Mushrooms</option>
+  <option value="pepperoni">Pepperoni</option>
+  <option value="onions">Onions</option>
+</select>
+
+To run:
+
+$('#multiselect').multiselect({
+	buttonClass: 'btn btn-default'
+});
+
+----
+
+More Details: https://github.com/davidstutz/bootstrap-multiselect
+
+Liscense Apache 2
+
+Made by David Stutz

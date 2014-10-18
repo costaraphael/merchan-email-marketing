@@ -1,0 +1,28 @@
+Example: http://www.a1alfred.com/legend/admin/jansyfileupload.html
+
+Include in head: <link href="assets/jasnyfileupload/css/jasny-bootstrap.min.css" rel="stylesheet">
+        		 <link href="assets/jasnyfileupload/css/jasny-bootstrap-responsive.min.css" rel="stylesheet">
+
+Include in body: <script src="assets/jasnyfileupload/js/jasny-bootstrap.min.js"></script>
+       			 <script src="assets/jasnyfileupload/js/bootstrap-fileupload.js"></script>
+
+Simple Usage:
+
+<div class="form-group">
+	<div class="fileupload fileupload-new" data-provides="fileupload">
+	  <div class="fileupload-preview thumbnail" style="width: 100%; height: 150px;"></div>
+	  <div>
+	    <span class="btn btn-default btn-file btn-block"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span><input type="file" /></span>
+	     <a href="#" class="btn btn-danger fileupload-exists btn-block" data-dismiss="fileupload">Remove</a>
+	  </div>
+	</div>
+</div>
+
+
+----
+
+More Details: https://github.com/jasny/bootstrap/
+
+Liscense Apache 2
+
+Made by Jasny BV

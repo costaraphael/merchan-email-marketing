@@ -1,0 +1,17 @@
+Example: http://www.a1alfred.com/legend/admin/charts2.html
+
+Include in head: <link href="assets/xcharts/css/xcharts.min.css" rel="stylesheet">
+
+Include in body: <script src="assets/xcharts/js/xcharts.min.js"></script>
+       			 <script src="assets/xcharts/js/d3.min.js"></script>
+
+Loads of examples on: http://www.a1alfred.com/legend/admin/charts2.html
+
+
+----
+
+More Details: http://github.com/tenXer/xcharts
+
+Liscense MIT
+
+Made by tenXer

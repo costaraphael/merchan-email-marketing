@@ -1,0 +1,72 @@
+Modified orginal files for font awesome 4
+
+Example: http://www.a1alfred.com/legend/admin/fueluxwizard.html
+
+Include in head: <link href="assets/fuelux/css/fuelux.min.css" rel="stylesheet">
+
+Include in body: <script src="assets/fuelux/js/all.min.js"></script>
+        		 <script src="assets/fuelux/js/loader.min.js"></script>
+
+Make sure a component is with in .fuelux
+
+More examples: https://github.com/ExactTarget/fuelux
+
+
+----
+
+More Details: https://github.com/ExactTarget/fuelux
+
+Liscense Apache 2
+
+Made by
+Adam Alexander
+
+http://twitter.com/adamalex
+http://github.com/adamalex
+
+Matt Beard
+
+http://github.com/mbeard
+
+Bryan Kohlmeier
+
+http://github.com/bkohlmeier
+
+Kevin Parkerson
+
+http://github.com/kevinparkerson
+
+Christopher McCulloh
+
+http://github.com/cmcculloh
+
+David Waltz
+
+https://github.com/dwaltz
+
+Dustin McCormick
+
+http://twitter.com/djmccormick
+http://github.com/djmccormick
+
+Alex Vernacchia
+
+http://twitter.com/vernacchia
+http://github.com/vernak2539
+
+Scott Plumlee
+
+http://twitter.com/scottplumlee
+http://github.com/plumlee
+
+Marvin Pribble
+
+http://github.com/marvinpribble
+
+Ryan Moore
+
+http://github.com/rbmoore
+
+Steven Rogers
+
+http://github.com/soldoutactivist

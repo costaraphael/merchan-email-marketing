@@ -1,0 +1,32 @@
+Example: http://www.a1alfred.com/legend/admin/colorpicker.html
+
+Include in head: <link href="assets/colorpalette/css/bootstrap-colorpalette.css" rel="stylesheet">
+
+Include in body: <script src="assets/colorpalette/js/bootstrap-colorpalette.js"></script>
+
+Simple Usage:
+
+<div class="input-group form-group">
+  <input type="text" class="form-control" id="selected-color1">
+  <span class="input-group-btn">
+    <button type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown">Color</button>
+     <ul class="dropdown-menu">
+	    <li><div id="colorpalette1"></div></li>
+	  </ul>
+  </span>
+</div>
+  
+To run:
+$('#colorpalette1').colorPalette()
+	.on('selectColor', function(e) {
+	$('#selected-color1').val(e.color);
+});
+
+
+----
+
+More Details: https://github.com/extremeFE/bootstrap-colorpalette
+
+Liscense Apache 2
+
+Made by Jiung Kang

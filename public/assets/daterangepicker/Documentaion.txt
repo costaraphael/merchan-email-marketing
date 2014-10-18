@@ -1,0 +1,27 @@
+Example: http://www.a1alfred.com/legend/admin/datetimepicker.html
+
+Include in head: <link href="assets/daterangepicker/css/daterangepicker-bs3.css" rel="stylesheet">
+
+Include in body: <script src="assets/daterangepicker/js/moment.min.js"></script>
+        		 <script src="assets/daterangepicker/js/daterangepicker.js"></script>
+
+Simple Usage:
+
+<div class="input-group form-group">
+  <span class="input-group-addon"><i class="icon-calendar"></i></span>
+  <input type="text" class="form-control" placeholder="Chose Dates" id="reservation">
+</div>
+  
+To run:
+
+$('#reservation').daterangepicker();
+
+
+----
+
+More Details: https://github.com/dangrossman/bootstrap-daterangepicker
+
+Liscense Apache 2
+
+Made by Dan Grossman
+http://www.dangrossman.info/

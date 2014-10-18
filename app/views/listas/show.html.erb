@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @lista.nome %>
+</p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @lista.usuario %>
+</p>
+
+<p>
+  <strong>Publica:</strong>
+  <%= @lista.publica %>
+</p>
+
+<p>
+  <strong>Global:</strong>
+  <%= @lista.global %>
+</p>
+
+<%= link_to 'Edit', edit_lista_path(@lista) %> |
+<%= link_to 'Back', listas_path %>

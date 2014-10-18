@@ -1,0 +1,33 @@
+Example: http://www.a1alfred.com/legend/admin/mediumeditor.html
+
+Include in head: <link href="assets/medium/css/medium.css" rel="stylesheet">
+
+Include in body: <script src="assets/medium/js/medium.js"></script>
+
+Basic Usage:
+
+<div id="article" class="medium-article">
+    <p>This is a paragraph</p>
+    <p>This is another paragraph with a <b>bold</b> tag</p>
+    <p>Try using hotkeys like cmd+b or ctrl+i, etc.</p>
+</div>
+
+To run:
+
+new Medium({
+    element: document.getElementById('article'),
+    mode: 'rich',
+    tags: {
+        paragraph: 'p',
+        outerLevel: ['pre','blockquote', 'figure', 'hr'],
+        innerLevel: ['a', 'b', 'u', 'i', 'img', 'strong']
+    }
+});
+
+----
+
+More Details: http://github.com/jakiestfu/Medium.js/
+
+Liscense MIT
+
+Made by Jacob Kelley

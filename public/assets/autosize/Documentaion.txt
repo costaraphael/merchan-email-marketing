@@ -1,0 +1,19 @@
+Example: http://www.a1alfred.com/legend/admin/formcomponents.html
+
+Include in body: <script src="assets/autosize/js/jquery.autosize.min.js"></script>
+
+Simple Usage:
+
+<textarea rows="5" class="form-control">Just press the enter key and see it react</textarea>
+
+To run:
+
+$('textarea').autosize(); 
+
+----
+
+More Details: http://www.jacklmoore.com/autosize
+
+Liscense MIT 
+
+Made by Jack Moore

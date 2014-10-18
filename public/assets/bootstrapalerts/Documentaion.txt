@@ -1,0 +1,28 @@
+Example: http://www.a1alfred.com/legend/admin/bootstrapalerts.html
+
+Include in body: <script src="assets/bootstrapalerts/js/jquery.bsAlerts.min.js"></script>
+
+Usage:
+
+<div data-alerts="alerts" data-titles="{'warning': '<em>Warning!</em>'}" data-ids="myid" data-fade="3000"></div>
+
+<button type="button" id="warn-me" class="btn btn-default btn-block">Create Alert</button>
+
+To run script: 
+
+$("#warn-me").click(function() {
+  $(document).trigger("add-alerts", [
+    {
+      'message': "This is a warning.",
+      'priority': 'warning'
+    }
+  ]);
+});
+
+----
+
+More Details: https://github.com/eltimn/jquery-bs-alerts
+
+Liscense MIT
+
+Made by Tim Nelson

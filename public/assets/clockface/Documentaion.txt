@@ -1,0 +1,24 @@
+Example: http://www.a1alfred.com/legend/admin/datetimepicker.html
+
+Include in head: <link href="assets/clockface/css/clockface.css" rel="stylesheet">
+
+Include in body: <script src="assets/clockface/js/clockface.js"></script>
+
+Simple Usage:
+
+<div class="form-group">
+	<input type="text" id="t1" value="2:30 PM" data-format="hh:mm A" class="form-control">
+</div>
+  
+To run:
+
+$('#t1').clockface();
+
+
+----
+
+More Details: http://github.com/vitalets/clockface
+
+Liscense MIT
+
+Made by Vitaliy Potapov

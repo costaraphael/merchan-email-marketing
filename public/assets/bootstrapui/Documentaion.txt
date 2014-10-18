@@ -1,0 +1,16 @@
+Example: http://www.a1alfred.com/legend/admin/jqueryui.html
+
+Include in head: <link href="assets/bootstrapui/css/jquery-ui-1.9.2.custom.css" rel="stylesheet">
+
+Include in body: <script src="assets/bootstrapui/js/jquery-ui-1.9.2.custom.min.js"></script>
+
+There are plenty of examples on the jqueryui page
+
+----
+
+More Details: http://addyosmani.github.com/jquery-ui-bootstrap
+
+Liscense MIT
+GPL Version 2
+
+Made by Addy Osmani

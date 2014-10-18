@@ -1,0 +1,32 @@
+Example: http://www.a1alfred.com/legend/admin/xeditable.html
+
+Include in head: <link href="assets/xeditable/css/bootstrap-editable.css" rel="stylesheet">
+
+Include in body: <script src="assets/xeditable/js/bootstrap-editable.min.js"></script>
+
+Basic Usage:
+
+<a href="xeditable.html#" id="status" data-type="select" data-pk="1" data-value="0" data-source="/status" data-original-title="Select status">Active</a>
+
+To run:
+
+$('#status').editable();
+
+
+----
+
+More Details: http://github.com/vitalets/x-editable
+
+Liscense MIT
+
+Made by Vitaliy Potapov
+
+------
+
+Moment
+
+More Details: https://github.com/moment/moment
+
+Liscense MIT
+
+Made by Tim Wood

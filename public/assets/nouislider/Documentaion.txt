@@ -1,0 +1,27 @@
+Example: http://www.a1alfred.com/legend/admin/nouislider.html
+
+Include in head: <link href="assets/nouislider/css/jquery.nouislider.min.css" rel="stylesheet">
+
+Include in body: <script src="assets/nouislider/js/jquery.nouislider.min.js"></script>
+
+Basic Usage:
+
+<div id="slider1"></div>
+
+To run:
+
+$("#slider1").noUiSlider({
+	 start: [20, 80]
+	,range: [0, 100]
+	,connect: true
+	,handles: 2
+});
+
+
+----
+
+More Details: https://github.com/leongersen/noUiSlider
+
+Liscense wtfpl (http://www.wtfpl.net/about/)
+
+Made by Léon Gersen

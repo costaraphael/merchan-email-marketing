@@ -1,0 +1,25 @@
+Example: http://www.a1alfred.com/legend/admin/lightbox.html
+
+Include in head: <link href="assets/swipebox/css/swipebox.css" rel="stylesheet">
+
+Include in body: <script src="assets/swipebox/js/jquery.swipebox.min.js"></script>
+        		 <script src="assets/swipebox/js/ios-orientationchange-fix.js"></script>
+
+Simple Usage:
+
+<a rel="gallery-1" href="assets/img/gallery/5.jpg" class="swipebox thumbnail">
+	<img src="assets/img/news/5.jpg" alt="image">
+</a>
+
+To run:
+
+$(".swipebox").swipebox();
+
+
+----
+
+Orintaion Fix
+
+Duel liscense MIT or GPLv2 (http://www.gnu.org/licenses/gpl-2.0.html)
+
+Mady by scottjehl

@@ -1,0 +1,39 @@
+Example: http://www.a1alfred.com/legend/admin/laddabootstrap.html
+
+Include in head: <link href="assets/laddabootstrap/css/ladda-themeless.min.css" rel="stylesheet">
+        		 <link href="assets/prism/css/prism.css" rel="stylesheet">
+
+Include in body: <script src="assets/laddabootstrap/js/ladda.min.js"></script>
+				 <script src="assets/spin/js/spin.min.js"></script>
+        		 <script src="assets/prism/js/prism.js"></script>
+
+There are loades of examples on http://www.a1alfred.com/legend/admin/laddabootstrap.html
+
+For Loading Progress
+
+Ladda.bind( 'div:not(.progress-demo) button', { timeout: 2000 } );
+
+// Bind progress buttons and simulate loading progress
+Ladda.bind( '.progress-demo button', {
+	callback: function( instance ) {
+		var progress = 0;
+		var interval = setInterval( function() {
+			progress = Math.min( progress + Math.random() * 0.1, 1 );
+			instance.setProgress( progress );
+
+			if( progress === 1 ) {
+				instance.stop();
+				clearInterval( interval );
+			}
+		}, 200 );
+	}
+} );
+
+
+----
+
+More Details: https://github.com/hakimel/Ladda
+
+Liscense MIT
+
+Made by Hakim El Hattab

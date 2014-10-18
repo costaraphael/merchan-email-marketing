@@ -1,0 +1,26 @@
+Example: http://www.a1alfred.com/legend/admin/select2.html
+
+Include in head: <link href="assets/select2/css/select2.css" rel="stylesheet">
+
+Include in body: <script src="assets/select2/js/select2.min.js"></script>
+
+Basic Usage:
+
+<select id="select">
+	<option value="AK">Alaska</option>
+    <option value="HI">Hawaii</option>
+    <option value="CA">California</option>
+</select>
+
+To run:
+
+$("#select").select2();	
+
+
+----
+
+More Details: http://ivaynberg.github.io/select2/
+
+Duel liscense Apache 2 or GPL (ttp://www.gnu.org/licenses/gpl-2.0.html)
+
+Made by Igor Vaynberg
