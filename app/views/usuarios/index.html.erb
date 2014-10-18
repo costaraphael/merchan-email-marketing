@@ -1,33 +1,35 @@
-<h1>Listing usuarios</h1>
+<h1>Usuários</h1>
+<div class="pull-right">
+  <%= link_to 'Adicionar', new_usuario_path, class: 'btn btn-primary' if can? :create, Usuario %>
+</div>
 
-<table>
-  <thead>
+<div class="row">
+
+  <table class="table table-striped table-hover">
+    <thead>
     <tr>
       <th>Nome</th>
       <th>Login</th>
-      <th>Senha</th>
-      <th>Salt</th>
       <th>Grupo usuario</th>
-      <th colspan="3"></th>
+      <th></th>
     </tr>
-  </thead>
+    </thead>
 
-  <tbody>
+    <tbody>
     <% @usuarios.each do |usuario| %>
-      <tr>
-        <td><%= usuario.nome %></td>
-        <td><%= usuario.login %></td>
-        <td><%= usuario.senha %></td>
-        <td><%= usuario.salt %></td>
-        <td><%= usuario.grupo_usuario %></td>
-        <td><%= link_to 'Show', usuario %></td>
-        <td><%= link_to 'Edit', edit_usuario_path(usuario) %></td>
-        <td><%= link_to 'Destroy', usuario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+        <tr>
+          <td><%= usuario.nome %></td>
+          <td><%= usuario.login %></td>
+          <td><%= usuario.grupo_usuario %></td>
+
+          <td>
+            <div>
+              <%= link_to 'Editar', edit_usuario_path(usuario) %>
+              <%= link_to 'Excluir', usuario, method: :delete, data: {confirm: 'Are you sure?'} %>
+            </div>
+          </td>
+        </tr>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Usuario', new_usuario_path %>
+    </tbody>
+  </table>
+</div>
