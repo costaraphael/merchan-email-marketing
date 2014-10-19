@@ -47,3 +47,7 @@ li.user > div.content > div > small {
 .dataTables_filter > label > input {
     width: 100% !important;
 }
+
+.icheckbox_square-blue {
+    display: inline-table !important;
+}
