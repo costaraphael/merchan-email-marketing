@@ -2,10 +2,12 @@ class DestinatariosController < ApplicationController
   before_action :set_destinatario, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
 
+  has_scope :by_query
+
   # GET /destinatarios
   # GET /destinatarios.json
   def index
-    @destinatarios = Destinatario.all
+    @destinatarios = apply_scopes(Destinatario).all
   end
 
   # GET /destinatarios/1

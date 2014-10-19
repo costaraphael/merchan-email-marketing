@@ -8,7 +8,7 @@ class Ability
     can :read, [Destinatario, Lista]
 
     if user.role.identificador == 'admin'
-      can :manage, [GrupoUsuario, Usuario]
+      can :manage, :all
     end
   end
 end

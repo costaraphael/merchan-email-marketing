@@ -44,3 +44,5 @@ gem 'cancan'
 gem 'simple_form'
 
 gem 'custom_error_message'
+
+gem 'has_scope'
