@@ -1,5 +1,8 @@
-<h1>New lista</h1>
+<h1 class="page-title">
+  Nova Lista
+  <%= link_to 'Voltar', listas_path, class: 'btn btn-primary btn-lg pull-right' %>
+</h1>
+<div class="separator"></div>
 
 <%= render 'form' %>
 
-<%= link_to 'Back', listas_path %>
