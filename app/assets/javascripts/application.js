@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require jquery-ui-1.9.2.custom.min
 //= require moment.min
+//= require icheck
 //= require jquery.dataTables
 //= require jquery.selectBoxIt
 //= require jquery.backstretch
@@ -27,4 +28,3 @@
 //= require theme
 //= require leftmenu
 //= require bootstrap
-//= require jquery.icheck

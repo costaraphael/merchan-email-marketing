@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-
+@import 'icheck/square/_all';
 .separator {
     border-top: 1px solid #eee !important;
     height: 0 !important;

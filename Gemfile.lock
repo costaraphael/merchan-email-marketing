@@ -45,6 +45,10 @@ GEM
       activesupport (>= 3.2, < 5)
     hike (1.2.3)
     i18n (0.6.11)
+    icheck-rails (1.0.2.1)
+      jquery-rails
+      rails (>= 3.1.0)
+      sass-rails
     jbuilder (2.2.2)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -125,6 +129,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   custom_error_message
   has_scope
+  icheck-rails
   jbuilder (~> 2.0)
   jquery-rails
   mysql2
