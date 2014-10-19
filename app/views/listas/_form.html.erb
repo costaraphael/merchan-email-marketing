@@ -7,9 +7,9 @@
         <%= f.input :publica %>
         <%= f.input :global %>
       </div>
-      <% if @lista.new_record? %>
+      <% unless @lista.new_record? %>
           <div class="col-md-6">
-            <%= render 'edicao-destinatarios', locals: {lista: @lista} %>
+            <%= render 'edicao_destinatarios', locals: {lista: @lista} %>
           </div>
       <% end %>
     </div>
