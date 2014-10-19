@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  resources :listas
+  resources :listas do
+    member do
+      post 'destinatarios', action: :add_destinatario
+      delete 'destinatarios', action: :add_destinatario
+    end
+  end
 
   resources :destinatarios
 

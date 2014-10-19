@@ -1,1 +1,17 @@
-testeteste
+<% content_for :js do %>
+    <%= javascript_include_tag 'editar_destinatarios' %>
+<% end %>
+<%= simple_form_for :add_destinatario, html: {class: 'form-horizontal'}, action: add_lista_destinatario_path, method: :post, remote: true do |f| %>
+    <div class="row">
+      <div class="col-xs-8">
+        <%= f.input :destinatario %>
+      </div>
+      <div class="col-xs-4">
+        <%= f.button :submit, 'Adicionar', class: 'btn btn-sm btn-primary btn-block' %>
+      </div>
+    </div>
+<% end %>
+<div class="separator" style="margin: 15px -15px !important"></div>
+<%= content_tag_for :div, @lista, class: 'lista-destinatarios' do %>
+    <%= render 'listagem_destinatarios', locals: {destinatarios: @lista.destinatarios} %>
+<% end %>
