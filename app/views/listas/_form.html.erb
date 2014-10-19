@@ -1,13 +1,20 @@
-<%= simple_form_for(@lista) do |f| %>
-  <%= f.error_notification %>
+<%= simple_form_for (@lista), :html => {class: 'form-horizontal'} do |f| %>
+    <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :nome %>
-    <%= f.input :publica %>
-    <%= f.input :global %>
-  </div>
+    <div class="row">
+      <div class="col-md-6">
+        <%= f.input :nome, class: 'form-control input-sm' %>
+        <%= f.input :publica %>
+        <%= f.input :global %>
+      </div>
+      <% if @lista.new_record? %>
+          <div class="col-md-6">
+            <%= render 'edicao-destinatarios', locals: {lista: @lista} %>
+          </div>
+      <% end %>
+    </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
 <% end %>

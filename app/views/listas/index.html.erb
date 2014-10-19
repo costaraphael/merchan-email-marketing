@@ -1,31 +1,36 @@
-<h1>Listing listas</h1>
-
-<table>
+<h1 class="page-title">
+  Listas
+  <%= link_to 'Nova', new_lista_path, class: 'btn btn-primary btn-lg pull-right' %>
+</h1>
+<div class="separator"></div>
+<table class="table table-hover table-striped data-table">
   <thead>
-    <tr>
-      <th>Nome</th>
-      <th>Usuario</th>
-      <th>Publica</th>
-      <th>Global</th>
-      <th colspan="3"></th>
-    </tr>
+  <tr>
+    <th>Nome</th>
+    <th>Proprietário</th>
+    <th>Publica</th>
+    <th>Global</th>
+    <th class="text-center" width="1">
+      <i class="fa fa-cogs"></i>
+    </th>
+  </tr>
   </thead>
 
   <tbody>
-    <% @listas.each do |lista| %>
+  <% @listas.each do |lista| %>
       <tr>
         <td><%= lista.nome %></td>
         <td><%= lista.usuario %></td>
-        <td><%= lista.publica %></td>
-        <td><%= lista.global %></td>
-        <td><%= link_to 'Show', lista %></td>
-        <td><%= link_to 'Edit', edit_lista_path(lista) %></td>
-        <td><%= link_to 'Destroy', lista, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= lista.publica ? 'Sim' : 'Não' %></td>
+        <td><%= lista.global ? 'Sim' : 'Não' %></td>
+        <td width="1" class="text-center" style="white-space: nowrap">
+          <%= link_to 'Destinatários', lista, class: 'btn btn-default btn-xs' %>
+          <%= link_to 'Editar', edit_lista_path(lista), class: 'btn btn-primary btn-xs' %>
+        </td>
       </tr>
-    <% end %>
+  <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Lista', new_lista_path %>

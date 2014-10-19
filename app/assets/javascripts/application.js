@@ -27,3 +27,4 @@
 //= require theme
 //= require leftmenu
 //= require bootstrap
+//= require jquery.icheck
