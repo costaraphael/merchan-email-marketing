@@ -31,7 +31,10 @@ class DestinatariosController < ApplicationController
 
     respond_to do |format|
       if @destinatario.save
-        format.html { redirect_to @destinatario, notice: 'Destinatario was successfully created.' }
+        format.html { redirect_to @destinatario, notice:{
+          type:'success',
+          message:"#{@destinatario} adicionado com sucesso"
+        }  }
         format.json { render :show, status: :created, location: @destinatario }
       else
         format.html { render :new }
@@ -45,7 +48,10 @@ class DestinatariosController < ApplicationController
   def update
     respond_to do |format|
       if @destinatario.update(destinatario_params)
-        format.html { redirect_to @destinatario, notice: 'Destinatario was successfully updated.' }
+        format.html { redirect_to @destinatario, notice: {
+            type: 'info',
+            message: "#{@destinatario} atualizado."
+        } }
         format.json { render :show, status: :ok, location: @destinatario }
       else
         format.html { render :edit }
@@ -57,21 +63,26 @@ class DestinatariosController < ApplicationController
   # DELETE /destinatarios/1
   # DELETE /destinatarios/1.json
   def destroy
-    @destinatario.destroy
+    status = @destinatario.status = !@destinatario.status
+    @destinatario.save
+
     respond_to do |format|
-      format.html { redirect_to destinatarios_url, notice: 'Destinatario was successfully destroyed.' }
+      format.html { redirect_to destinatarios_url, notice: {
+          type: 'info',
+          message: "#{ @destinatario.to_s + (status ? ' ativado' : ' desativado') } com sucesso."}
+      }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_destinatario
-      @destinatario = Destinatario.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_destinatario
+    @destinatario = Destinatario.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def destinatario_params
-      params.require(:destinatario).permit(:nome, :email, :status, :sexo)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def destinatario_params
+    params.require(:destinatario).permit(:nome, :email, :status, :sexo)
+  end
 end

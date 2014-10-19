@@ -44,5 +44,11 @@
   </div>
 </section>
 <%= yield :js %>
+
+<% if notice %>
+    <script>
+        toastr.<%= notice['type'] %>('<%= notice['message'] %>');
+    </script>
+<% end %>
 </body>
 </html>

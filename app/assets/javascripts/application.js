@@ -16,6 +16,7 @@
 //= require jquery-ui-1.9.2.custom.min
 //= require moment.min
 //= require icheck
+//= require toastr
 //= require jquery.dataTables
 //= require jquery.selectBoxIt
 //= require jquery.backstretch
