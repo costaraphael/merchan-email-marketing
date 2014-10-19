@@ -1,20 +1,28 @@
-<%= simple_form_for (@lista), :html => {class: 'form-horizontal'} do |f| %>
-    <%= f.error_notification %>
+<div class="row">
+  <%= simple_form_for (@lista), :html => {class: 'form-horizontal'} do |f| %>
+      <%= f.error_notification %>
 
-    <div class="row">
       <div class="col-md-6">
-        <%= f.input :nome, class: 'form-control input-sm' %>
-        <%= f.input :publica %>
-        <%= f.input :global %>
-      </div>
-      <% unless @lista.new_record? %>
-          <div class="col-md-6">
-            <%= render 'edicao_destinatarios', locals: {lista: @lista} %>
+        <div class="panel" style="padding: 15px">
+          <% unless @lista.new_record? %>
+          <% end %>
+          <legend>Dados da Lista</legend>
+          <%= f.input :nome, class: 'form-control input-sm' %>
+          <%= f.input :publica, label: false, inline_label: ' Publica?', input_html: {class: 'icheck-me', 'data-skin' => 'square', 'data-color' => 'blue'} %>
+          <%= f.input :global, label: false, inline_label: ' Global?', input_html: {class: 'icheck-me', 'data-skin' => 'square', 'data-color' => 'blue'} %>
+          <div class="form-actions" style="margin-top: 20px">
+            <%= f.button :submit, 'Salvar', class: 'btn btn-primary btn-lg btn-block' %>
           </div>
-      <% end %>
-    </div>
+        </div>
+      </div>
+  <% end %>
 
-    <div class="form-actions">
-      <%= f.button :submit %>
-    </div>
-<% end %>
+  <% unless @lista.new_record? %>
+      <div class="col-md-6">
+        <div class="panel" style="padding: 15px">
+          <legend>Destinatários</legend>
+          <%= render 'edicao_destinatarios', locals: {lista: @lista} %>
+        </div>
+      </div>
+  <% end %>
+</div>

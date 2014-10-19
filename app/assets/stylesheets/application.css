@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-
+@import 'icheck/square/_all';
 .separator {
     border-top: 1px solid #eee !important;
     height: 0 !important;
@@ -46,4 +46,8 @@ li.user > div.content > div > small {
 
 .dataTables_filter > label > input {
     width: 100% !important;
+}
+
+.icheckbox_square-blue {
+    display: inline-table !important;
 }

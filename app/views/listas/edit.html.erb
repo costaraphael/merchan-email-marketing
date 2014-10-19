@@ -1,6 +1,10 @@
-<h1>Editing lista</h1>
+<h1 class="page-title">
+  Edição de lista
+  <div class="pull-right">
+    <%= link_to 'Destinatários', @lista, class: 'btn btn-success btn-lg ' %>
+    <%= link_to 'Voltar', listas_path, class: 'btn btn-default btn-lg' %>
+  </div>
+</h1>
+<div class="separator"></div>
 
 <%= render 'form' %>
-
-<%= link_to 'Show', @lista %> |
-<%= link_to 'Back', listas_path %>
