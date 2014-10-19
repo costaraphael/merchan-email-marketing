@@ -12,8 +12,7 @@ class DestinatariosController < ApplicationController
 
   # GET /destinatarios/1
   # GET /destinatarios/1.json
-  def show
-  end
+
 
   # GET /destinatarios/new
   def new
@@ -68,7 +67,7 @@ class DestinatariosController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to destinatarios_url, notice: {
-          type: 'info',
+          type: "#{status ? 'success' : 'warning'}",
           message: "#{ @destinatario.to_s + (status ? ' ativado' : ' desativado') } com sucesso."}
       }
       format.json { head :no_content }

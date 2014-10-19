@@ -1,31 +1,36 @@
-<h1>Listing destinatarios</h1>
-
-<table>
+<h1 class="page-title">
+  Destinatários
+  <%= link_to 'Novo', new_destinatario_path, class: 'btn btn-primary btn-lg pull-right' %>
+</h1>
+<div class="separator"></div>
+<table class="table table-hover table-striped data-table">
   <thead>
-    <tr>
-      <th>Nome</th>
-      <th>Email</th>
-      <th>Status</th>
-      <th>Sexo</th>
-      <th colspan="3"></th>
-    </tr>
+  <tr>
+    <th>Nome</th>
+    <th>Email</th>
+    <th>Status</th>
+    <th>Sexo</th>
+    <th class="text-center" width="1">
+      <i class="fa fa-cogs"></i>
+    </th>
+  </tr>
   </thead>
 
   <tbody>
-    <% @destinatarios.each do |destinatario| %>
+  <% @destinatarios.each do |destinatario| %>
       <tr>
         <td><%= destinatario.nome %></td>
         <td><%= destinatario.email %></td>
-        <td><%= destinatario.status %></td>
+        <td><%= destinatario.status ? 'Ativo' : 'Inativo' %></td>
         <td><%= destinatario.sexo %></td>
-        <td><%= link_to 'Show', destinatario %></td>
-        <td><%= link_to 'Edit', edit_destinatario_path(destinatario) %></td>
-        <td><%= link_to 'Destroy', destinatario, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="text-center" width="1" style="white-space: nowrap">
+          <%= link_to 'Editar', edit_destinatario_path(destinatario), class: 'btn btn-primary btn-xs' %>
+          <%= link_to destinatario.status ? 'Desativar' : 'Ativar', destinatario,class:'btn btn-danger btn-xs', method: :delete, data: {confirm: "Deseja #{destinatario.status ? 'desativar' : 'ativar'} o destinatário #{destinatario}?"} %>
+        </td>
       </tr>
-    <% end %>
+  <% end %>
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Destinatario', new_destinatario_path %>
