@@ -21,5 +21,6 @@ Usuario.create({
                    role: roles[0],
                    ativo: true,
                    senha: '56fca427e2fd12ce5bb82248966c5d0aeb5a7e55',
-                   salt: '9ce9877232403522eb295c0aaee717da01d0f4aa'
+                   salt: '9ce9877232403522eb295c0aaee717da01d0f4aa',
+                   email: 'admin@admin.admin'
                })
