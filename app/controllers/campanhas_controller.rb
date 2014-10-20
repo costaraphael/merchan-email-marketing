@@ -7,11 +7,6 @@ class CampanhasController < ApplicationController
     @campanhas = Campanha.all
   end
 
-  # GET /campanhas/1
-  # GET /campanhas/1.json
-  def show
-  end
-
   # GET /campanhas/new
   def new
     @campanha = Campanha.new

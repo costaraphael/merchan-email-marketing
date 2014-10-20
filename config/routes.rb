@@ -1,22 +1,28 @@
 Rails.application.routes.draw do
 
-  resources :campanhas do
-    resources :mensagens
-  end
+  scope path_names: {edit: 'editar'} do
+    scope path_names: {new: 'nova'} do
 
-  resources :listas do
-    member do
-      post 'destinatarios', action: :add_destinatario, as: 'destinatario'
-      delete 'destinatarios/:id_lista_destinatario', action: :remove_destinatario, as: 'remove_destinatario'
+      resources :campanhas, except: [:show] do
+        resources :mensagens
+      end
+
+      resources :listas, except: [:destroy] do
+        member do
+          post 'destinatarios', action: :add_destinatario, as: 'destinatario'
+          delete 'destinatarios/:id_lista_destinatario', action: :remove_destinatario, as: 'remove_destinatario'
+        end
+      end
+    end
+    scope path_names: {new: 'novo'} do
+
+      resources :destinatarios, except: [:show]
+
+      resources :usuarios, except: [:show]
+
+      resources :grupo_usuarios, except: [:show]
     end
   end
-
-  resources :destinatarios, except: [:show]
-
-  resources :usuarios, except: [:show]
-
-  resources :grupo_usuarios, except: [:show]
-
   root 'index#index'
 
   get 'login' => 'index#login'

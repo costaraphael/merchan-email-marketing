@@ -20,10 +20,11 @@
     </li>
     <!-- NAVEGAÇÃO -->
     <%== create_link root_path, 'Inicio', 'home' %>
-    <%== create_link destinatarios_path, 'Destinatários', 'openbook' if can? :read, Destinatario %>
-    <%== create_link listas_path, 'Listas de Envio', 'bubbles' if can? :read, Lista %>
-    <%== create_link grupo_usuarios_path, 'Grupos de Usuários', 'users' if can? :read, GrupoUsuario %>
+    <%== create_link campanhas_path, 'Campanhas', 'rocket' if can? :read, Campanha %>
+    <%== create_link listas_path, 'Listas de Envio', 'openbook' if can? :read, Lista %>
+    <%== create_link destinatarios_path, 'Destinatários', 'users' if can? :read, Destinatario %>
     <%== create_link usuarios_path, 'Usuários', 'man' if can? :read, Usuario %>
+    <%== create_link grupo_usuarios_path, 'Grupos de Usuários', 'share' if can? :read, GrupoUsuario %>
     <!-- NAVEGAÇÃO -->
     <li class="logout">
       <%= link_to logout_path do %>

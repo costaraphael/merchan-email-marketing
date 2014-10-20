@@ -22,6 +22,8 @@ var load = function () {
     $(".date-time-picker").datetimepicker({format: "dd/mm/yyyy hh:ii"});
 
     $('.main').fadeIn(200);
+
+    $('.summernote').summernote();
 };
 
 $(document).on('ready page:load', load);
