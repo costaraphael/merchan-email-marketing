@@ -28,7 +28,10 @@ class UsuariosController < ApplicationController
 
     @usuario.ativo = true
     if @usuario.save
-      redirect_to usuarios_path
+      redirect_to usuarios_path, notice: {
+          type: 'success',
+          message: "Usuário #{@usuario} criado com sucesso."
+      }
     else
       render :new
     end
@@ -43,11 +46,18 @@ class UsuariosController < ApplicationController
   end
 
   def destroy
-    @usuario.ativo = !@usuario.ativo?
+    logger.info 'oi'
+    @usuario.ativo = !@usuario.ativo
     if @usuario.save
-      redirect_to usuarios_path, notice: "Usuario #{@usuario.ativo? ? 'ativado' : 'desativado'} com sucesso."
+      redirect_to usuarios_path, notice: {
+          type: "#{ @usuario.ativo ? 'success' : 'warning'}",
+          message: "Usuário #{@usuario} #{@usuario.ativo? ? 'ativado' : 'desativado'} com sucesso."
+      }
     else
-      redirect_to usuarios_path, notice: "Não foi possível #{@usuario.ativo? ? 'desativar' : 'ativar'} este usuário."
+      redirect_to usuarios_path, notice: {
+          type: 'danger',
+          message: "Não foi possível #{@usuario.ativo? ? 'desativar' : 'ativar'} o usuário #{@usuario}."
+      }
     end
   end
 

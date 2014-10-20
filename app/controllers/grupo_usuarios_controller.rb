@@ -20,7 +20,10 @@ class GrupoUsuariosController < ApplicationController
   def create
     @grupo_usuario = GrupoUsuario.new(grupo_usuario_params)
     if @grupo_usuario.save
-      redirect_to grupo_usuarios_path
+      redirect_to grupo_usuarios_path, notice: {
+          type: 'success',
+          message: "#{@grupo_usuario} criado com sucesso."
+      }
     else
       render :new
     end
@@ -30,7 +33,10 @@ class GrupoUsuariosController < ApplicationController
     @grupo_usuario.update(grupo_usuario_params)
 
     if @grupo_usuario.save
-      redirect_to grupo_usuarios_path
+      redirect_to grupo_usuarios_path, notice: {
+          type: 'info',
+          message: "#{@grupo_usuario} atualizado com sucesso."
+      }
     else
       render :new
     end

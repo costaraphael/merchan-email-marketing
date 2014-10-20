@@ -1,23 +1,20 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Nome:</strong>
+<h1 class="page-title">
+  Lista:
   <%= @lista.nome %>
-</p>
-
+</h1>
+<div class="separator"></div>
 <p>
-  <strong>Usuario:</strong>
+  <strong>Propietário:</strong>
   <%= @lista.usuario %>
 </p>
 
 <p>
   <strong>Publica:</strong>
-  <%= @lista.publica %>
+  <%= @lista.publica ? 'Sim' : 'Não' %>
 </p>
-
 <p>
   <strong>Global:</strong>
-  <%= @lista.global %>
+  <%= @lista.global ? 'Sim' : 'Não' %>
 </p>
 <%= render partial: 'edicao_destinatarios', locals: {lista: @lista} %>
 
