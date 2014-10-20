@@ -27,7 +27,7 @@
 
           <td class="text-center" width="1" style="white-space: nowrap">
             <%= link_to 'Editar', edit_usuario_path(usuario), class: 'btn btn-primary btn-xs' %>
-            <%= link_to usuario.ativo? ? 'Desativar' : 'Ativar', usuario, class: 'btn btn-danger btn-xs', method: :delete, data: {confirm: "Deseja #{usuario.ativo? ? 'desativar' : 'ativar'} esse usuário?"} %>
+            <%= link_to usuario.ativo ? 'Desativar' : 'Ativar', usuario, class: 'btn btn-danger btn-xs', method: :delete, data: {confirm: "Deseja #{usuario.ativo? ? 'desativar' : 'ativar'} esse usuário?"} %>
           </td>
         </tr>
     <% end %>

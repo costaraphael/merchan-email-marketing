@@ -40,7 +40,10 @@ class ListasController < ApplicationController
 
     respond_to do |format|
       if @lista.save
-        format.html { redirect_to @lista, notice: 'Lista was successfully created.' }
+        format.html { redirect_to @lista, notice: {
+            type: 'info',
+            message: "Lista #{@lista} criada com sucesso."
+        } }
         format.json { render :show, status: :created, location: @lista }
       else
         format.html { render :new }
@@ -54,7 +57,10 @@ class ListasController < ApplicationController
   def update
     respond_to do |format|
       if @lista.update(lista_params)
-        format.html { redirect_to @lista, notice: 'Lista was successfully updated.' }
+        format.html { redirect_to @lista, notice: {
+            type:'info',
+            message: "Lista #{@lista} alerada com sucesso."
+        }}
         format.json { render :show, status: :ok, location: @lista }
       else
         format.html { render :edit }
@@ -65,13 +71,7 @@ class ListasController < ApplicationController
 
   # DELETE /listas/1
   # DELETE /listas/1.json
-  def destroy
-    @lista.destroy
-    respond_to do |format|
-      format.html { redirect_to listas_url, notice: 'Lista was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
+
 
   def add_destinatario
     lista_destinatario = @lista.lista_destinatarios.where(destinatario_params).take
@@ -81,7 +81,7 @@ class ListasController < ApplicationController
     end
 
     respond_to do |format|
-      format.js {render 'listas/list_destinatario' }
+      format.js { render 'listas/list_destinatario' }
     end
   end
 
@@ -91,7 +91,7 @@ class ListasController < ApplicationController
     lista_destinatarios.destroy unless lista_destinatarios.nil?
 
     respond_to do |format|
-      format.js {render 'listas/list_destinatario'}
+      format.js { render 'listas/list_destinatario' }
     end
   end
 
