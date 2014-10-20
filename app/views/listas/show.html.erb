@@ -19,6 +19,7 @@
   <strong>Global:</strong>
   <%= @lista.global %>
 </p>
+<%= render partial: 'edicao_destinatarios', locals: {lista: @lista} %>
 
 <%= link_to 'Edit', edit_lista_path(@lista) %> |
 <%= link_to 'Back', listas_path %>

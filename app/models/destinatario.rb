@@ -9,6 +9,10 @@ class Destinatario < ActiveRecord::Base
     query
   end
 
+  def sexo_nome
+    self.sexo == 'm' ? 'Masculino' : 'Feminino'
+  end
+
   def to_s
     "#{self.nome} <#{self.email}>"
   end

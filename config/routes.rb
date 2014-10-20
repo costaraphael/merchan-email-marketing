@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
   resources :listas do
     member do
-      post 'destinatarios', action: :add_destinatario
-      delete 'destinatarios', action: :add_destinatario
+      post 'destinatarios', action: :add_destinatario, as: 'destinatario'
+      delete 'destinatarios/:id_lista_destinatario', action: :remove_destinatario, as: 'remove_destinatario'
     end
   end
 
-  resources :destinatarios
+  resources :destinatarios, except: [:show]
 
   resources :usuarios, except: [:show]
 

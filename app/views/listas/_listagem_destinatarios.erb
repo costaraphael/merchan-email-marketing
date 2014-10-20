@@ -1,0 +1,28 @@
+<% content_for :js do %>
+    <%= javascript_include_tag 'editar_destinatarios' %>
+<% end %>
+<table class="table table-hover table-striped data-table">
+  <thead>
+  <tr>
+    <th>Destinatário</th>
+    <th>Sexo</th>
+    <th class="text-center" width="1">
+      <i class="fa fa-cogs"></i>
+    </th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% lista.lista_destinatarios.each do |lista_destinatario| %>
+      <tr>
+        <td><%= lista_destinatario.destinatario %></td>
+        <td><%= lista_destinatario.destinatario.sexo_nome %></td>
+        <td class="text-center" width="1" style="white-space: nowrap">
+          <%= link_to remove_destinatario_lista_path(lista, lista_destinatario), class:'btn btn-danger btn-xs', method: :delete, remote: true do %>
+          x
+          <% end %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
