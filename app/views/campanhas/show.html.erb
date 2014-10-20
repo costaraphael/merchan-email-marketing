@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @campanha.nome %>
+</p>
+
+<p>
+  <strong>Criador:</strong>
+  <%= @campanha.criador %>
+</p>
+
+<%= link_to 'Edit', edit_campanha_path(@campanha) %> |
+<%= link_to 'Back', campanhas_path %>

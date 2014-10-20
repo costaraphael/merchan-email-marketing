@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  campanha_id: 
+  enviada: false
+  envio: 2014-10-19 23:26:51
+  texto: MyText
+
+two:
+  campanha_id: 
+  enviada: false
+  envio: 2014-10-19 23:26:51
+  texto: MyText

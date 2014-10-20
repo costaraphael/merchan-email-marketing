@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Campanha:</strong>
+  <%= @mensagem.campanha %>
+</p>
+
+<p>
+  <strong>Enviada:</strong>
+  <%= @mensagem.enviada %>
+</p>
+
+<p>
+  <strong>Envio:</strong>
+  <%= @mensagem.envio %>
+</p>
+
+<p>
+  <strong>Texto:</strong>
+  <%= @mensagem.texto %>
+</p>
+
+<%= link_to 'Edit', edit_campanha_mensagem_path(@campanha, @mensagem) %> |
+<%= link_to 'Back', campanha_mensagens_path(@campanha) %>

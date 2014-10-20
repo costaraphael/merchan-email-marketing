@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+  resources :campanhas do
+    resources :mensagens
+  end
+
   resources :listas do
     member do
       post 'destinatarios', action: :add_destinatario, as: 'destinatario'

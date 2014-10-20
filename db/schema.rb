@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141018223904) do
+ActiveRecord::Schema.define(version: 20141020032651) do
+
+  create_table "campanhas", force: true do |t|
+    t.string   "nome"
+    t.integer  "criador_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "campanhas", ["criador_id"], name: "index_campanhas_on_criador_id", using: :btree
 
   create_table "destinatarios", force: true do |t|
     t.string   "nome"
@@ -49,6 +58,17 @@ ActiveRecord::Schema.define(version: 20141018223904) do
   end
 
   add_index "listas", ["usuario_id"], name: "index_listas_on_usuario_id", using: :btree
+
+  create_table "mensagens", force: true do |t|
+    t.integer  "campanha_id"
+    t.boolean  "enviada"
+    t.datetime "envio"
+    t.text     "texto"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "mensagens", ["campanha_id"], name: "index_mensagens_on_campanha_id", using: :btree
 
   create_table "roles", force: true do |t|
     t.text     "nome"

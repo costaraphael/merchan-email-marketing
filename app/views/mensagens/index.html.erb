@@ -1,0 +1,31 @@
+<h1>Listing mensagens</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Campanha</th>
+      <th>Enviada</th>
+      <th>Envio</th>
+      <th>Texto</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mensagens.each do |mensagem| %>
+      <tr>
+        <td><%= mensagem.campanha %></td>
+        <td><%= mensagem.enviada %></td>
+        <td><%= mensagem.envio %></td>
+        <td><%= mensagem.texto %></td>
+        <td><%= link_to 'Show', [@campanha, mensagem] %></td>
+        <td><%= link_to 'Edit', edit_campanha_mensagem_path(@campanha, mensagem) %></td>
+        <td><%= link_to 'Destroy', campanha_mensagem_path(@campanha, mensagem), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mensagem', new_campanha_mensagem_path(@campanha) %>
