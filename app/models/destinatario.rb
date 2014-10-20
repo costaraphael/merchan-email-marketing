@@ -1,5 +1,11 @@
 class Destinatario < ActiveRecord::Base
 
+  validates :email, presence: {message: 'não pode ser nulo'}
+  validates :email, uniqueness: {message: 'informado já está cadastrado!'}
+  validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, message: 'informado não é válido'}
+  validates :nome, presence: {message: 'não pode ser nulo'}
+  validates :sexo, presence: {message: 'não pode ser nulo'}
+
   def self.by_query(texto)
     nomes = texto.split(' ')
     query = self

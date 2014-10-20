@@ -1,15 +1,31 @@
 <%= simple_form_for @destinatario, html: {class: 'form-horizontal'} do |f| %>
-    <%= f.error_notification %>
+    <% if @destinatario.errors.any? %>
+        <div class="alert alert-danger">
+          <h4>
+            <%= pluralize(@destinatario.errors.count, 'erro impediu', 'erros impediram') %> que esse grupo fosse salvo.
+          </h4>
+
+          <ul>
+            <% @destinatario.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
     <div class="row">
       <div class="col-md-6">
-        <%= f.input :nome, input_html: {class: 'input-sm form-control'} %>
-        <%= f.input :email, input_html: {class: 'input-sm form-control'} %>
-        <%= f.input :status %>
-        <%= f.collection_radio_buttons :sexo, [%w(m Masculino), %w(f Feminino)], :first, :last %>
+        <%= f.input :nome %>
+        <%= f.input :email %>
+        <% if !@destinatario.new_record? %>
+            <%= f.input :status, inline_label:' Status', input_html: {class: 'icheck-me', 'data-skin' => 'square', 'data-color' => 'blue'} %>
+        <% end %>
+        <div style="margin: 5px">
+          <%= f.collection_radio_buttons :sexo, [%w(m Masculino), %w(f Feminino)], :first, :last, {}, class: 'icheck-me', 'data-skin' => 'square', 'data-color' => 'blue' %>
+        </div>
       </div>
     </div>
 
-    <div class="form-actions">
-      <%= f.button :submit %>
+    <div class="form-actions" style="margin-top: 20px">
+      <%= f.button :submit, 'Salvar', class: 'btn btn-primary btn-lg btn-block' %>
     </div>
 <% end %>

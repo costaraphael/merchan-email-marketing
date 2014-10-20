@@ -1,6 +1,8 @@
-<h1>Editing destinatario</h1>
+<h1>
+  Ediçao de destinatário
+  <%= link_to 'Voltar', destinatarios_path, class: 'btn btn-default btn-lg pull-right' %>
+</h1>
+<div class="separator"></div>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @destinatario %> |
-<%= link_to 'Back', destinatarios_path %>

@@ -14,11 +14,13 @@
  *= require_self
  */
 @import 'icheck/square/_all';
+
 .separator {
     border-top: 1px solid #eee !important;
     height: 0 !important;
     margin: 20px -20px !important;;
 }
+
 .page-title {
     margin-top: 0 !important;
 }
@@ -49,5 +51,9 @@ li.user > div.content > div > small {
 }
 
 .icheckbox_square-blue {
+    display: inline-table !important;
+}
+
+.iradio_square-blue {
     display: inline-table !important;
 }

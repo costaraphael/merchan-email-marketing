@@ -27,13 +27,13 @@ class DestinatariosController < ApplicationController
   # POST /destinatarios.json
   def create
     @destinatario = Destinatario.new(destinatario_params)
-
+    @destinatario.status = true
     respond_to do |format|
       if @destinatario.save
-        format.html { redirect_to @destinatario, notice:{
-          type:'success',
-          message:"#{@destinatario} adicionado com sucesso"
-        }  }
+        format.html { redirect_to destinatarios_path, notice: {
+            type: 'success',
+            message: "#{@destinatario} adicionado com sucesso"
+        } }
         format.json { render :show, status: :created, location: @destinatario }
       else
         format.html { render :new }
@@ -47,7 +47,7 @@ class DestinatariosController < ApplicationController
   def update
     respond_to do |format|
       if @destinatario.update(destinatario_params)
-        format.html { redirect_to @destinatario, notice: {
+        format.html { redirect_to destinatarios_path, notice: {
             type: 'info',
             message: "#{@destinatario} atualizado."
         } }
