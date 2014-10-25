@@ -1,11 +1,11 @@
 class MensagensController < ApplicationController
-  before_action :set_mensagem, only: [:show, :edit, :update, :destroy]
+  before_action :set_mensagem, only: [:show, :edit, :update, :destroy, :visualizada]
   before_action :set_campanha
 
   # GET /mensagens
   # GET /mensagens.json
   def index
-    @mensagens = @campanha.mensagens
+    @mensagens = Mensagem.where campanha: @campanha
   end
 
   # GET /mensagens/1
@@ -20,6 +20,13 @@ class MensagensController < ApplicationController
 
   # GET /mensagens/1/edit
   def edit
+    @mensagem.envio = @mensagem.envio.strftime '%d/%m/%Y %H:%M'
+  end
+
+  def visualizada
+    respond_to do |format|
+      format.png { render text: 'foi' }
+    end
   end
 
   # POST /mensagens
@@ -27,9 +34,16 @@ class MensagensController < ApplicationController
   def create
     @mensagem = @campanha.mensagens.create(mensagem_params)
 
+    @mensagem.enviada = false
+
     respond_to do |format|
       if @mensagem.save
-        format.html { redirect_to campanha_mensagem_path(@campanha, @mensagem), notice: 'Mensagem was successfully created.' }
+        format.html do
+          redirect_to campanha_mensagem_path(@campanha, @mensagem), notice: {
+              type: 'info',
+              message: 'Mensagem adicionada com sucesso.'
+          }
+        end
         format.json { render :show, status: :created, location: @mensagem }
       else
         format.html { render :new }
@@ -43,7 +57,12 @@ class MensagensController < ApplicationController
   def update
     respond_to do |format|
       if @mensagem.update(mensagem_params)
-        format.html { redirect_to campanha_mensagem_path(@campanha, @mensagem), notice: 'Mensagem was successfully updated.' }
+        format.html do
+          redirect_to campanha_mensagem_path(@campanha, @mensagem), notice: {
+              type: 'info',
+              message: 'Mensagem atualizada com sucesso.'
+          }
+        end
         format.json { render :show, status: :ok, location: @mensagem }
       else
         format.html { render :edit }
@@ -57,7 +76,12 @@ class MensagensController < ApplicationController
   def destroy
     @mensagem.destroy
     respond_to do |format|
-      format.html { redirect_to campanha_mensagens_path(@campanha), notice: 'Mensagem was successfully destroyed.' }
+      format.html do
+        redirect_to campanha_mensagens_path(@campanha), notice: {
+            type: 'info',
+            message: 'Mensagem removida com sucesso.'
+        }
+      end
       format.json { head :no_content }
     end
   end
@@ -74,6 +98,6 @@ class MensagensController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def mensagem_params
-    params.require(:mensagem).permit(:enviada, :envio, :texto)
+    params.require(:mensagem).permit(:envio, :texto)
   end
 end

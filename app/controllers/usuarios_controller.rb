@@ -1,17 +1,19 @@
 class UsuariosController < ApplicationController
-  before_action :set_usuario, only: [:edit, :update, :destroy]
-  respond_to :html
+  before_action :set_usuario, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
 
   def index
     @usuarios = Usuario.where('id != :usuario', usuario: @active_user.id)
-    respond_with(@usuarios)
   end
 
+  def show
+    respond_to do |format|
+      format.json { render json: @usuario }
+    end
+  end
 
   def new
     @usuario = Usuario.new
-    respond_with(@usuario)
   end
 
   def edit
@@ -27,21 +29,37 @@ class UsuariosController < ApplicationController
     @usuario.senha_confirmation = @usuario.senha if senha_confirmada
 
     @usuario.ativo = true
-    if @usuario.save
-      redirect_to usuarios_path, notice: {
-          type: 'success',
-          message: "Usuário #{@usuario} criado com sucesso."
-      }
-    else
-      render :new
+
+    respond_to do |format|
+      if @usuario.save
+        format.html do
+          redirect_to destinatarios_path, notice: {
+              type: 'success',
+              message: "Usuário #{@usuario} adicionado com sucesso"
+          }
+        end
+        format.json { render :show, status: :created, location: @usuario }
+      else
+        format.html { render :new }
+        format.json { render json: @usuario.errors, status: :unprocessable_entity }
+      end
     end
   end
 
   def update
-    if @usuario.update(usuario_params)
-      redirect_to usuarios_path
-    else
-      render :new
+    respond_to do |format|
+      if @usuario.update(usuario_params)
+        format.html do
+          redirect_to destinatarios_path, notice: {
+              type: 'success',
+              message: "Usuário #{@usuario} atualizado com sucesso"
+          }
+        end
+        format.json { render :show, status: :created, location: @usuario }
+      else
+        format.html { render :new }
+        format.json { render json: @usuario.errors, status: :unprocessable_entity }
+      end
     end
   end
 

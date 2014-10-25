@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141020032651) do
+ActiveRecord::Schema.define(version: 20141024235438) do
 
   create_table "campanhas", force: true do |t|
     t.string   "nome"
     t.integer  "criador_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "descricao"
   end
 
   add_index "campanhas", ["criador_id"], name: "index_campanhas_on_criador_id", using: :btree

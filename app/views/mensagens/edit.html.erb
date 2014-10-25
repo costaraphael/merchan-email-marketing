@@ -1,6 +1,9 @@
-<h1>Editing mensagem</h1>
-
+<h1 class="page-title">
+  Edição da mensagem
+  <br>
+  <small>Campanha <%= @campanha.nome %></small>
+  <%= link_to 'Pré-visualizar', campanha_mensagem_path(@campanha, @mensagem), class: 'btn btn-success btn-lg pull-right' %>
+  <%= link_to 'Voltar', campanha_mensagens_path(@campanha), class: 'btn btn-default btn-lg pull-right', style: 'margin-right: 5px' %>
+</h1>
+<div class="separator"></div>
 <%= render 'form' %>
-
-<%= link_to 'Show', [@campanha, @mensagem] %> |
-<%= link_to 'Back', campanha_mensagens_path(@campanha) %>

@@ -7,6 +7,13 @@ class CampanhasController < ApplicationController
     @campanhas = Campanha.all
   end
 
+  # GET /campanhas/1.json
+  def show
+    respond_to do |format|
+      format.json
+    end
+  end
+
   # GET /campanhas/new
   def new
     @campanha = Campanha.new
@@ -25,7 +32,12 @@ class CampanhasController < ApplicationController
 
     respond_to do |format|
       if @campanha.save
-        format.html { redirect_to @campanha, notice: 'Campanha was successfully created.' }
+        format.html do
+          redirect_to campanhas_path, notice: {
+              type: 'info',
+              message: "Campanha #{@campanha.nome} criada com sucesso."
+          }
+        end
         format.json { render :show, status: :created, location: @campanha }
       else
         format.html { render :new }
@@ -39,7 +51,12 @@ class CampanhasController < ApplicationController
   def update
     respond_to do |format|
       if @campanha.update(campanha_params)
-        format.html { redirect_to @campanha, notice: 'Campanha was successfully updated.' }
+        format.html do
+          redirect_to campanhas_path, notice: {
+              type: 'info',
+              message: "Campanha #{@campanha.nome} atualizada com sucesso."
+          }
+        end
         format.json { render :show, status: :ok, location: @campanha }
       else
         format.html { render :edit }
@@ -59,13 +76,13 @@ class CampanhasController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_campanha
-      @campanha = Campanha.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_campanha
+    @campanha = Campanha.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def campanha_params
-      params.require(:campanha).permit(:nome)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def campanha_params
+    params.require(:campanha).permit(:nome, :descricao)
+  end
 end

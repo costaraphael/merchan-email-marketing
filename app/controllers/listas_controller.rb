@@ -1,21 +1,11 @@
 class ListasController < ApplicationController
-  before_action :set_lista, only: [:show, :edit, :update, :destroy, :add_destinatario, :remove_destinatario]
+  before_action :set_lista, only: [:show, :edit, :update, :add_destinatario, :remove_destinatario]
   load_and_authorize_resource
 
   # GET /listas
   # GET /listas.json
   def index
-    @listas = Lista
-    .joins(:usuario)
-    .where('usuario_id = :usuario OR (publica = 1 AND grupo_usuario_id = :grupo_usuario) OR global = 1',
-           usuario: @active_user.id, grupo_usuario: @active_user.grupo_usuario_id)
-
-    Thread.new do
-      10.times do |i|
-        logger.info "teste #{i}"
-        sleep 1
-      end
-    end
+    @listas = Lista.listas_visiveis_para @active_user
   end
 
   # GET /listas/1
@@ -40,10 +30,12 @@ class ListasController < ApplicationController
 
     respond_to do |format|
       if @lista.save
-        format.html { redirect_to @lista, notice: {
-            type: 'info',
-            message: "Lista #{@lista} criada com sucesso."
-        } }
+        format.html do
+          redirect_to @lista, notice: {
+              type: 'info',
+              message: "Lista #{@lista} criada com sucesso."
+          }
+        end
         format.json { render :show, status: :created, location: @lista }
       else
         format.html { render :new }
@@ -57,10 +49,12 @@ class ListasController < ApplicationController
   def update
     respond_to do |format|
       if @lista.update(lista_params)
-        format.html { redirect_to @lista, notice: {
-            type:'info',
-            message: "Lista #{@lista} alerada com sucesso."
-        }}
+        format.html do
+          redirect_to @lista, notice: {
+              type: 'info',
+              message: "Lista #{@lista} alerada com sucesso."
+          }
+        end
         format.json { render :show, status: :ok, location: @lista }
       else
         format.html { render :edit }
@@ -69,20 +63,12 @@ class ListasController < ApplicationController
     end
   end
 
-  # DELETE /listas/1
-  # DELETE /listas/1.json
-
-
   def add_destinatario
     lista_destinatario = @lista.lista_destinatarios.where(destinatario_params).take
 
-    if lista_destinatario.nil?
-      @lista.lista_destinatarios.create destinatario_params
-    end
+    @lista.lista_destinatarios.create(destinatario_params) if lista_destinatario.nil?
 
-    respond_to do |format|
-      format.js { render 'listas/list_destinatario' }
-    end
+    render_lista_destinatario
   end
 
   def remove_destinatario
@@ -90,12 +76,16 @@ class ListasController < ApplicationController
 
     lista_destinatarios.destroy unless lista_destinatarios.nil?
 
+    render_lista_destinatario
+  end
+
+  private
+  def render_lista_destinatario
     respond_to do |format|
       format.js { render 'listas/list_destinatario' }
     end
   end
 
-  private
   # Use callbacks to share common setup or constraints between actions.
   def set_lista
     @lista = Lista.find(params[:id])

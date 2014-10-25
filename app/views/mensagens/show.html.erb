@@ -1,24 +1,20 @@
-<p id="notice"><%= notice %></p>
-
+<h1 class="page-title">
+  Pré-visualização da mensagem
+  <br>
+  <small>Campanha <%= @campanha.nome %></small>
+  <%= link_to 'Editar', edit_campanha_mensagem_path(@campanha, @mensagem), class: 'btn btn-primary btn-lg pull-right' %>
+  <%= link_to 'Voltar', campanha_mensagens_path(@campanha), class: 'btn btn-default btn-lg pull-right', style: 'margin-right: 5px' %>
+</h1>
+<div class="separator"></div>
 <p>
-  <strong>Campanha:</strong>
-  <%= @mensagem.campanha %>
+  <strong>Enviada: </strong>
+  <%= @mensagem.enviada ? 'Sim' : 'Não' %>
 </p>
-
 <p>
-  <strong>Enviada:</strong>
-  <%= @mensagem.enviada %>
+  <strong>Envio: </strong>
+  <%= @mensagem.envio.strftime '%d/%m/%Y às %H:%M' %>
 </p>
-
+<div class="separator"></div>
 <p>
-  <strong>Envio:</strong>
-  <%= @mensagem.envio %>
+  <%== @mensagem.texto %>
 </p>
-
-<p>
-  <strong>Texto:</strong>
-  <%= @mensagem.texto %>
-</p>
-
-<%= link_to 'Edit', edit_campanha_mensagem_path(@campanha, @mensagem) %> |
-<%= link_to 'Back', campanha_mensagens_path(@campanha) %>

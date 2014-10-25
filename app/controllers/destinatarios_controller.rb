@@ -10,9 +10,12 @@ class DestinatariosController < ApplicationController
     @destinatarios = apply_scopes(Destinatario).all
   end
 
-  # GET /destinatarios/1
   # GET /destinatarios/1.json
-
+  def show
+    respond_to do |format|
+      format.json { render json: @destinatario }
+    end
+  end
 
   # GET /destinatarios/new
   def new
@@ -30,10 +33,12 @@ class DestinatariosController < ApplicationController
     @destinatario.status = true
     respond_to do |format|
       if @destinatario.save
-        format.html { redirect_to destinatarios_path, notice: {
-            type: 'success',
-            message: "#{@destinatario} adicionado com sucesso"
-        } }
+        format.html do
+          redirect_to destinatarios_path, notice: {
+              type: 'success',
+              message: "#{@destinatario} adicionado com sucesso"
+          }
+        end
         format.json { render :show, status: :created, location: @destinatario }
       else
         format.html { render :new }
@@ -47,10 +52,12 @@ class DestinatariosController < ApplicationController
   def update
     respond_to do |format|
       if @destinatario.update(destinatario_params)
-        format.html { redirect_to destinatarios_path, notice: {
-            type: 'info',
-            message: "#{@destinatario} atualizado."
-        } }
+        format.html do
+          redirect_to destinatarios_path, notice: {
+              type: 'info',
+              message: "#{@destinatario} atualizado com sucesso."
+          }
+        end
         format.json { render :show, status: :ok, location: @destinatario }
       else
         format.html { render :edit }
@@ -66,10 +73,12 @@ class DestinatariosController < ApplicationController
     @destinatario.save
 
     respond_to do |format|
-      format.html { redirect_to destinatarios_url, notice: {
-          type: "#{status ? 'success' : 'warning'}",
-          message: "#{ @destinatario.to_s + (status ? ' ativado' : ' desativado') } com sucesso."}
-      }
+      format.html do
+        redirect_to destinatarios_url, notice: {
+            type: "#{status ? 'success' : 'warning'}",
+            message: "#{ @destinatario.to_s + (status ? ' ativado' : ' desativado') } com sucesso."
+        }
+      end
       format.json { head :no_content }
     end
   end

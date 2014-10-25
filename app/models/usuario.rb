@@ -14,7 +14,7 @@ class Usuario < ActiveRecord::Base
   validates :nome, presence: {message: 'não pode ser nulo'}
 
   def to_s
-    "#{self.nome}#{self.email.nil? ? '' : "<#{self.email}>"}"
+    "#{self.nome}#{self.email.nil? ? '' : " <#{self.email}>"}"
   end
 
   def ativo?

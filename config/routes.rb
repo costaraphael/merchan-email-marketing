@@ -3,8 +3,12 @@ Rails.application.routes.draw do
   scope path_names: {edit: 'editar'} do
     scope path_names: {new: 'nova'} do
 
-      resources :campanhas, except: [:show] do
-        resources :mensagens
+      resources :campanhas do
+        resources :mensagens do
+          member do
+            get 'visualizada/:id_destinatario', action: 'visualizada', as: 'visualizada'
+          end
+        end
       end
 
       resources :listas, except: [:destroy] do
@@ -16,11 +20,11 @@ Rails.application.routes.draw do
     end
     scope path_names: {new: 'novo'} do
 
-      resources :destinatarios, except: [:show]
+      resources :destinatarios
 
-      resources :usuarios, except: [:show]
+      resources :usuarios
 
-      resources :grupo_usuarios, except: [:show]
+      resources :grupo_usuarios
     end
   end
   root 'index#index'

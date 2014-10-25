@@ -1,17 +1,22 @@
 class GrupoUsuariosController < ApplicationController
   before_action :set_grupo_usuario, only: [:show, :edit, :update, :destroy]
-  respond_to :html
   load_and_authorize_resource
 
+  # GET /campanhas
+  # GET /campanhas.json
   def index
     @grupo_usuarios = GrupoUsuario.all
-    respond_with(@grupo_usuarios)
   end
 
+  # GET /campanhas/1.json
+  def show
+    respond_to do |format|
+      format.json { render json: @grupo_usuario }
+    end
+  end
 
   def new
     @grupo_usuario = GrupoUsuario.new
-    respond_with(@grupo_usuario)
   end
 
   def edit
@@ -19,26 +24,37 @@ class GrupoUsuariosController < ApplicationController
 
   def create
     @grupo_usuario = GrupoUsuario.new(grupo_usuario_params)
-    if @grupo_usuario.save
-      redirect_to grupo_usuarios_path, notice: {
-          type: 'success',
-          message: "#{@grupo_usuario} criado com sucesso."
-      }
-    else
-      render :new
+
+    respond_to do |format|
+      if @grupo_usuario.save
+        format.html do
+          redirect_to destinatarios_path, notice: {
+              type: 'success',
+              message: "#{@grupo_usuario.nome} adicionado com sucesso"
+          }
+        end
+        format.json { render :show, status: :created, location: @grupo_usuario }
+      else
+        format.html { render :new }
+        format.json { render json: @grupo_usuario.errors, status: :unprocessable_entity }
+      end
     end
   end
 
   def update
-    @grupo_usuario.update(grupo_usuario_params)
-
-    if @grupo_usuario.save
-      redirect_to grupo_usuarios_path, notice: {
-          type: 'info',
-          message: "#{@grupo_usuario} atualizado com sucesso."
-      }
-    else
-      render :new
+    respond_to do |format|
+      if @grupo_usuario.update(grupo_usuario_params)
+        format.html do
+          redirect_to destinatarios_path, notice: {
+              type: 'info',
+              message: "#{@grupo_usuario} atualizado com sucesso."
+          }
+        end
+        format.json { render :show, status: :ok, location: @grupo_usuario }
+      else
+        format.html { render :edit }
+        format.json { render json: @grupo_usuario.errors, status: :unprocessable_entity }
+      end
     end
   end
 

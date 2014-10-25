@@ -19,11 +19,13 @@ var load = function () {
 
     $('.with-select2').select2();
 
-    $(".date-time-picker").datetimepicker({format: "dd/mm/yyyy hh:ii"});
+    $(".date-time-picker").datetimepicker(
+        {
+            format: "dd/mm/yyyy hh:ii",
+            language: 'pt-BR'
+        });
 
     $('.main').fadeIn(200);
-
-    $('.summernote').summernote();
 };
 
 $(document).on('ready page:load', load);
