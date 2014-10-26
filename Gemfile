@@ -42,8 +42,14 @@ gem 'icheck-rails'
 # Cancan authorization
 gem 'cancan'
 
+# Simple form forms
 gem 'simple_form'
 
+# For fully customized messages when needed
 gem 'custom_error_message'
 
+# For automated scope utilization inside the controller
 gem 'has_scope'
+
+# For cron jobs management
+gem 'whenever', :require => false
