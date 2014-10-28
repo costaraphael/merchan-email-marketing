@@ -11,7 +11,16 @@ class Lista < ActiveRecord::Base
   def self.listas_visiveis_para(user)
     self
     .joins(:usuario)
-    .where('usuario_id = :usuario OR (publica = 1 AND grupo_usuario_id = :grupo_usuario) OR global = 1',
+    .where('listas.usuario_id = :usuario OR (listas.publica = 1 AND usuarios.grupo_usuario_id = :grupo_usuario) OR listas.global = 1',
            usuario: user.id, grupo_usuario: user.grupo_usuario_id)
+  end
+
+  def self.by_query(texto)
+    nomes = texto.split(' ')
+    query = self
+    nomes.each do |nome|
+      query = query.where('listas.nome LIKE :nome', nome: "%#{nome}%")
+    end
+    query
   end
 end

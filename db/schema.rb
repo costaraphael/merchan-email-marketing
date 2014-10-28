@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141024235438) do
+ActiveRecord::Schema.define(version: 20141028230145) do
 
   create_table "campanhas", force: true do |t|
     t.string   "nome"
@@ -22,6 +22,11 @@ ActiveRecord::Schema.define(version: 20141024235438) do
   end
 
   add_index "campanhas", ["criador_id"], name: "index_campanhas_on_criador_id", using: :btree
+
+  create_table "campanhas_listas", force: true do |t|
+    t.integer "campanha_id"
+    t.integer "lista_id"
+  end
 
   create_table "destinatarios", force: true do |t|
     t.string   "nome"

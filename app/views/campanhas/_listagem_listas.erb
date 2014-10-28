@@ -1,0 +1,26 @@
+<% content_for :js do %>
+    <%= javascript_include_tag 'editar_listas' %>
+<% end %>
+<table class="table table-hover table-striped data-table">
+  <thead>
+  <tr>
+    <th>Destinatário</th>
+    <th class="text-center" width="1">
+      <i class="fa fa-cogs"></i>
+    </th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% campanha.listas.each do |lista| %>
+      <tr>
+        <td><%= lista.nome %></td>
+        <td class="text-center" width="1" style="white-space: nowrap">
+          <%= link_to remove_lista_campanha_path(campanha, lista), class:'btn btn-danger btn-xs', method: :delete, remote: true do %>
+          x
+          <% end %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

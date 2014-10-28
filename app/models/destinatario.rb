@@ -6,6 +6,14 @@ class Destinatario < ActiveRecord::Base
   validates :nome, presence: {message: 'não pode ser nulo'}
   validates :sexo, presence: {message: 'não pode ser nulo'}
 
+  def sexo_nome
+    self.sexo == 'm' ? 'Masculino' : 'Feminino'
+  end
+
+  def to_s
+    "#{self.nome} <#{self.email}>"
+  end
+
   def self.by_query(texto)
     nomes = texto.split(' ')
     query = self
@@ -13,13 +21,5 @@ class Destinatario < ActiveRecord::Base
       query = query.where('nome LIKE :nome OR email LIKE :nome', nome: "%#{nome}%")
     end
     query
-  end
-
-  def sexo_nome
-    self.sexo == 'm' ? 'Masculino' : 'Feminino'
-  end
-
-  def to_s
-    "#{self.nome} <#{self.email}>"
   end
 end

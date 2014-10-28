@@ -1,0 +1,14 @@
+$("#campanha_<%= @campanha.id %>.listas-campanha")
+        .html("<%= escape_javascript(render partial: 'listagem_listas', locals: { campanha: @campanha } ) %>");
+
+$("#campanha_<%= @campanha.id %>.listas-campanha").find('table').not('.fc-header').dataTable({
+    aoColumnDefs: [
+        {
+            aTargets: [-1],
+            bSortable: false,
+            bSearchable: false
+        }
+    ]
+});
+
+$('.selectpicker').selectBoxIt();

@@ -1,7 +1,7 @@
 <% content_for :js do %>
     <%= javascript_include_tag 'editar_destinatarios' %>
 <% end %>
-<%= simple_form_for :add_destinatario, url: destinatario_lista_path(lista), method: :post, remote: true do |f| %>
+<%= simple_form_for :add_destinatario, url: add_destinatario_lista_path(lista), method: :post, remote: true do |f| %>
     <div class="row">
       <div class="col-xs-8">
         <%= f.input :destinatario_select2 %>

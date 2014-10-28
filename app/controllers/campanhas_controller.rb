@@ -1,5 +1,5 @@
 class CampanhasController < ApplicationController
-  before_action :set_campanha, only: [:show, :edit, :update, :destroy]
+  before_action :set_campanha, only: [:show, :edit, :update, :destroy, :add_lista, :remove_lista]
 
   # GET /campanhas
   # GET /campanhas.json
@@ -75,7 +75,29 @@ class CampanhasController < ApplicationController
     end
   end
 
+  def add_lista
+    lista = Lista.find lista_params[:lista_id]
+
+    @campanha.listas << lista unless lista.in? @campanha.listas
+
+    render_lista_listas
+  end
+
+  def remove_lista
+    lista = Lista.find params[:id_lista]
+
+    @campanha.listas.destroy lista
+
+    render_lista_listas
+  end
+
   private
+  def render_lista_listas
+    respond_to do |format|
+      format.js { render 'campanhas/list_listas' }
+    end
+  end
+
   # Use callbacks to share common setup or constraints between actions.
   def set_campanha
     @campanha = Campanha.find(params[:id])
@@ -84,5 +106,9 @@ class CampanhasController < ApplicationController
   # Never trust parameters from the scary internet, only allow the white list through.
   def campanha_params
     params.require(:campanha).permit(:nome, :descricao)
+  end
+
+  def lista_params
+    params.require(:add_lista).permit(:lista_id)
   end
 end

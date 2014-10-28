@@ -2,10 +2,12 @@ class ListasController < ApplicationController
   before_action :set_lista, only: [:show, :edit, :update, :add_destinatario, :remove_destinatario]
   load_and_authorize_resource
 
+  has_scope :by_query
+
   # GET /listas
   # GET /listas.json
   def index
-    @listas = Lista.listas_visiveis_para @active_user
+    @listas = apply_scopes(Lista).listas_visiveis_para @active_user
   end
 
   # GET /listas/1

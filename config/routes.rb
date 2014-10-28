@@ -9,12 +9,16 @@ Rails.application.routes.draw do
             get 'visualizada/:id_destinatario', action: 'visualizada', as: 'visualizada'
           end
         end
+        member do
+          post 'listas', action: :add_lista, as: :add_lista
+          delete 'listas/:id_lista', action: :remove_lista, as: :remove_lista
+        end
       end
 
       resources :listas, except: [:destroy] do
         member do
-          post 'destinatarios', action: :add_destinatario, as: 'destinatario'
-          delete 'destinatarios/:id_lista_destinatario', action: :remove_destinatario, as: 'remove_destinatario'
+          post 'destinatarios', action: :add_destinatario, as: :add_destinatario
+          delete 'destinatarios/:id_lista_destinatario', action: :remove_destinatario, as: :remove_destinatario
         end
       end
     end
