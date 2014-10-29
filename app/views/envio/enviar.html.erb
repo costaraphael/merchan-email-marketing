@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div style="display: hidden">
+  <%= image_tag "#{visualizada_campanha_mensagem_url(@mensagem.campanha, @mensagem, @destinatario, host: 'http://merchan.local')}.png" %>
+</div>
+<%== @texto %>
+<hr>
+<%== @assinatura %>
+</body>
+</html>

@@ -16,9 +16,6 @@
       <div class="col-md-6">
         <%= f.input :nome %>
         <%= f.input :email %>
-        <% if !@destinatario.new_record? %>
-            <%= f.input :status, inline_label:' Status', input_html: {class: 'icheck-me', 'data-skin' => 'square', 'data-color' => 'blue'} %>
-        <% end %>
         <div style="margin: 5px">
           <%= f.collection_radio_buttons :sexo, [%w(m Masculino), %w(f Feminino)], :first, :last, {}, class: 'icheck-me', 'data-skin' => 'square', 'data-color' => 'blue' %>
         </div>

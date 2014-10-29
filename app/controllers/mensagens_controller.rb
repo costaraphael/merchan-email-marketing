@@ -24,6 +24,7 @@ class MensagensController < ApplicationController
   end
 
   def visualizada
+    logger.info "Destinatario #{params[:id_destinatario]} abriu a imagem."
     respond_to do |format|
       format.png { render text: 'foi' }
     end

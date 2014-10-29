@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141028230145) do
+ActiveRecord::Schema.define(version: 20141029014806) do
 
   create_table "campanhas", force: true do |t|
     t.string   "nome"
@@ -35,6 +35,11 @@ ActiveRecord::Schema.define(version: 20141028230145) do
     t.string   "sexo"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "destinatarios_mensagens", force: true do |t|
+    t.integer "destinatario_id"
+    t.integer "mensagem_id"
   end
 
   create_table "grupo_usuarios", force: true do |t|
@@ -94,6 +99,7 @@ ActiveRecord::Schema.define(version: 20141028230145) do
     t.integer  "role_id"
     t.boolean  "ativo"
     t.string   "email"
+    t.text     "assinatura"
   end
 
   add_index "usuarios", ["grupo_usuario_id"], name: "index_usuarios_on_grupo_usuario_id", using: :btree

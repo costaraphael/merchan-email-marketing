@@ -14,12 +14,17 @@ class Destinatario < ActiveRecord::Base
     "#{self.nome} <#{self.email}>"
   end
 
+  def inativo
+    not self.status
+  end
+
   def self.by_query(texto)
     nomes = texto.split(' ')
-    query = self
+    query = self.where status: true
     nomes.each do |nome|
       query = query.where('nome LIKE :nome OR email LIKE :nome', nome: "%#{nome}%")
     end
     query
   end
+
 end
