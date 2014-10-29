@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SYSCEE</title>
+  <title>Merchan</title>
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -27,6 +27,11 @@
     <%== create_link grupo_usuarios_path, 'Grupos de Usuários', 'share' if can? :read, GrupoUsuario %>
     <!-- NAVEGAÇÃO -->
     <li class="logout">
+      <%= link_to dados_pessoais_path do %>
+          Dados Pessoais
+          <%= image_tag 'icons/logout.png' %>
+      <% end %>
+
       <%= link_to logout_path do %>
           Sair
           <div>

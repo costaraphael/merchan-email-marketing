@@ -26,6 +26,7 @@
 //= require bootstrap-datetimepicker.pt-BR
 //= require DT_bootstrap
 //= require summernote.min
+//= require summernote_pt_br
 //= require app
 //= require theme
 //= require leftmenu

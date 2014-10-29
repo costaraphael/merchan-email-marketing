@@ -1,6 +1,8 @@
 <h1 class="page-title">
   Lista:
   <%= @lista.nome %>
+  <%= link_to 'Voltar', listas_path, class: 'btn btn-default btn-lg pull-right' %>
+  <%= link_to 'Editar', edit_lista_path(@lista), class: 'btn btn-primary btn-lg pull-right',style: 'margin-right: 5px  ' %>
 </h1>
 <div class="separator"></div>
 <p>
@@ -18,5 +20,3 @@
 </p>
 <%= render partial: 'edicao_destinatarios', locals: {lista: @lista} %>
 
-<%= link_to 'Edit', edit_lista_path(@lista) %> |
-<%= link_to 'Back', listas_path %>
