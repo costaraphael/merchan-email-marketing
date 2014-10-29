@@ -10,6 +10,7 @@ ActiveSupport::Inflector.inflections(:en) do |inflect|
   inflect.uncountable %w( fish sheep )
   inflect.irregular 'lista', 'listas'
   inflect.irregular 'mensagem', 'mensagens'
+  inflect.irregular 'pessoal', 'pessoais'
 end
 
 # These inflection rules are supported but not enabled by default:

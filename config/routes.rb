@@ -33,6 +33,10 @@ Rails.application.routes.draw do
   end
   root 'index#index'
 
+  get 'dados_pessoais' => 'index#dados_pessoais'
+
+  post 'dados_pessoais' => 'index#salvar_dados_pessoais'
+
   get 'login' => 'index#login'
 
   post 'login' => 'index#logar'

@@ -1,17 +1,21 @@
 <div class="clearfix">
   <div class="col col-md-6 col-xs-12">
-    <%= simple_form_for(@campanha) do |f| %>
-        <%= f.error_notification %>
+    <div class="panel" style="padding: 15px">
+      <%= simple_form_for(@campanha) do |f| %>
+          <%= f.error_notification %>
 
-        <%= f.input :nome, wrapper_html: {style: 'margin-bottom: 10px'} %>
-        <%= f.input :descricao, label: 'Descrição', input_html: {style: 'resize: none', rows: 5} %>
+          <%= f.input :nome, wrapper_html: {style: 'margin-bottom: 10px'} %>
+          <%= f.input :descricao, label: 'Descrição', input_html: {style: 'resize: none', rows: 8} %>
 
-        <div class="form-actions" style="margin-top: 10px">
-          <%= f.button :submit, 'Salvar', class: 'btn btn-lg btn-block btn-primary' %>
-        </div>
-    <% end %>
+          <div class="form-actions" style="margin-top: 10px">
+            <%= f.button :submit, 'Salvar', class: 'btn btn-lg btn-block btn-primary' %>
+          </div>
+      <% end %>
+    </div>
   </div>
   <div class="col col-md-6 col-xs-12">
-    <%= render partial: 'campanhas/edicao_listas', locals: {campanha: @campanha} %>
+    <div class="panel" style="padding: 15px">
+      <%= render partial: 'campanhas/edicao_listas', locals: {campanha: @campanha} %>
+    </div>
   </div>
 </div>
